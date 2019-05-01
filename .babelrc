@@ -13,7 +13,22 @@
   ],
   "plugins": [
     "@babel/plugin-syntax-dynamic-import",
-    "react-loadable/babel"
+    "react-loadable/babel",
+        [
+          "babel-plugin-root-import",
+          {
+            "paths": [
+              {
+                "rootPathPrefix": "~",
+                "rootPathSuffix": ""
+              },
+              {
+                "rootPathPrefix": "&",
+                "rootPathSuffix": "src/"
+              }
+            ]
+          }
+        ]
   ]
 
 }

@@ -3,7 +3,7 @@ const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugi
 
 module.exports = {
   entry: {
-    client: './dist/client.js'
+    client: './lib/src/client.js'
   },
   output: {
     path: path.resolve(__dirname, 'public'),
