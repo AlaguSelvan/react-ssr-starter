@@ -6,10 +6,10 @@
   "author": "Alagu Selvan",
   "license": "MIT",
   "scripts": {
-    "start:dev": "npm run build:compile && npm run build:dev && npm run start:client",
+    "start:dev": "npm run build:compile && npm run build:dev && npm run start",
     "build:compile": "babel lib -d dist",
-    "start:client": "nodemon dist/index.js",
-    "build:dev": "webpack --mode development --config webpack.config.js "
+    "start": "nodemon lib/index.js",
+    "build:dev": "webpack --mode development --config webpack.config.js"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
@@ -22,6 +22,7 @@
     "react-helmet": "^5.2.0",
     "react-jss": "^8.6.1",
     "react-loadable": "^5.5.0",
+    "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
