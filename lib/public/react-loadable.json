@@ -1,18 +1,344 @@
 {
-  "./App": [
+  "./Paper": [
     {
-      "id": "./lib/src/App.js",
-      "name": "./lib/src/App.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
+      "id": "./node_modules/@material-ui/core/Paper/Paper.js",
+      "name": "./node_modules/@material-ui/core/Paper/Paper.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
     }
   ],
-  "./Mobile": [
+  "@material-ui/core/Paper": [
     {
-      "id": "./lib/src/Mobile.js",
-      "name": "./lib/src/Mobile.js",
+      "id": "./node_modules/@material-ui/core/Paper/index.js",
+      "name": "./node_modules/@material-ui/core/Paper/index.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "./Typography": [
+    {
+      "id": "./node_modules/@material-ui/core/Typography/Typography.js",
+      "name": "./node_modules/@material-ui/core/Typography/Typography.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "@material-ui/core/Typography": [
+    {
+      "id": "./node_modules/@material-ui/core/Typography/index.js",
+      "name": "./node_modules/@material-ui/core/Typography/index.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "deep-equal": [
+    {
+      "id": "./node_modules/deep-equal/index.js",
+      "name": "./node_modules/deep-equal/index.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "./lib/is_arguments.js": [
+    {
+      "id": "./node_modules/deep-equal/lib/is_arguments.js",
+      "name": "./node_modules/deep-equal/lib/is_arguments.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "./lib/keys.js": [
+    {
+      "id": "./node_modules/deep-equal/lib/keys.js",
+      "name": "./node_modules/deep-equal/lib/keys.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "exenv": [
+    {
+      "id": "./node_modules/exenv/index.js",
+      "name": "./node_modules/exenv/index.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "react-helmet": [
+    {
+      "id": "./node_modules/react-helmet/lib/Helmet.js",
+      "name": "./node_modules/react-helmet/lib/Helmet.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "./HelmetConstants.js": [
+    {
+      "id": "./node_modules/react-helmet/lib/HelmetConstants.js",
+      "name": "./node_modules/react-helmet/lib/HelmetConstants.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "./HelmetUtils.js": [
+    {
+      "id": "./node_modules/react-helmet/lib/HelmetUtils.js",
+      "name": "./node_modules/react-helmet/lib/HelmetUtils.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "react-side-effect": [
+    {
+      "id": "./node_modules/react-side-effect/lib/index.js",
+      "name": "./node_modules/react-side-effect/lib/index.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "shallowequal": [
+    {
+      "id": "./node_modules/shallowequal/index.js",
+      "name": "./node_modules/shallowequal/index.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    }
+  ],
+  "./arrayWithoutHoles": [
+    {
+      "id": "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js",
+      "name": "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./iterableToArray": [
+    {
+      "id": "./node_modules/@babel/runtime/helpers/iterableToArray.js",
+      "name": "./node_modules/@babel/runtime/helpers/iterableToArray.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./nonIterableSpread": [
+    {
+      "id": "./node_modules/@babel/runtime/helpers/nonIterableSpread.js",
+      "name": "./node_modules/@babel/runtime/helpers/nonIterableSpread.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "@babel/runtime/helpers/toConsumableArray": [
+    {
+      "id": "./node_modules/@babel/runtime/helpers/toConsumableArray.js",
+      "name": "./node_modules/@babel/runtime/helpers/toConsumableArray.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./Button": [
+    {
+      "id": "./node_modules/@material-ui/core/Button/Button.js",
+      "name": "./node_modules/@material-ui/core/Button/Button.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "@material-ui/core/Button": [
+    {
+      "id": "./node_modules/@material-ui/core/Button/index.js",
+      "name": "./node_modules/@material-ui/core/Button/index.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./ButtonBase": [
+    {
+      "id": "./node_modules/@material-ui/core/ButtonBase/ButtonBase.js",
+      "name": "./node_modules/@material-ui/core/ButtonBase/ButtonBase.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./Ripple": [
+    {
+      "id": "./node_modules/@material-ui/core/ButtonBase/Ripple.js",
+      "name": "./node_modules/@material-ui/core/ButtonBase/Ripple.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./TouchRipple": [
+    {
+      "id": "./node_modules/@material-ui/core/ButtonBase/TouchRipple.js",
+      "name": "./node_modules/@material-ui/core/ButtonBase/TouchRipple.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./createRippleHandler": [
+    {
+      "id": "./node_modules/@material-ui/core/ButtonBase/createRippleHandler.js",
+      "name": "./node_modules/@material-ui/core/ButtonBase/createRippleHandler.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./focusVisible": [
+    {
+      "id": "./node_modules/@material-ui/core/ButtonBase/focusVisible.js",
+      "name": "./node_modules/@material-ui/core/ButtonBase/focusVisible.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "../ButtonBase": [
+    {
+      "id": "./node_modules/@material-ui/core/ButtonBase/index.js",
+      "name": "./node_modules/@material-ui/core/ButtonBase/index.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./NoSsr": [
+    {
+      "id": "./node_modules/@material-ui/core/NoSsr/NoSsr.js",
+      "name": "./node_modules/@material-ui/core/NoSsr/NoSsr.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "../NoSsr": [
+    {
+      "id": "./node_modules/@material-ui/core/NoSsr/index.js",
+      "name": "./node_modules/@material-ui/core/NoSsr/index.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "../utils/ownerDocument": [
+    {
+      "id": "./node_modules/@material-ui/core/utils/ownerDocument.js",
+      "name": "./node_modules/@material-ui/core/utils/ownerDocument.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "../utils/ownerWindow": [
+    {
+      "id": "./node_modules/@material-ui/core/utils/ownerWindow.js",
+      "name": "./node_modules/@material-ui/core/utils/ownerWindow.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "react-lifecycles-compat": [
+    {
+      "id": "./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js",
+      "name": "./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "react-transition-group/Transition": [
+    {
+      "id": "./node_modules/react-transition-group/Transition.js",
+      "name": "./node_modules/react-transition-group/Transition.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "react-transition-group/TransitionGroup": [
+    {
+      "id": "./node_modules/react-transition-group/TransitionGroup.js",
+      "name": "./node_modules/react-transition-group/TransitionGroup.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./utils/ChildMapping": [
+    {
+      "id": "./node_modules/react-transition-group/utils/ChildMapping.js",
+      "name": "./node_modules/react-transition-group/utils/ChildMapping.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./utils/PropTypes": [
+    {
+      "id": "./node_modules/react-transition-group/utils/PropTypes.js",
+      "name": "./node_modules/react-transition-group/utils/PropTypes.js",
+      "file": "1.bundle.js",
+      "publicPath": "1.bundle.js"
+    }
+  ],
+  "./First": [
+    {
+      "id": "./lib/src/Desktop/First.js",
+      "name": "./lib/src/Desktop/First.js",
+      "file": "2.bundle.js",
+      "publicPath": "2.bundle.js"
+    }
+  ],
+  "./Second": [
+    {
+      "id": "./lib/src/Desktop/Second.js",
+      "name": "./lib/src/Desktop/Second.js",
+      "file": "3.bundle.js",
+      "publicPath": "3.bundle.js"
+    }
+  ],
+  "./About": [
+    {
+      "id": "./lib/src/Mobile/About.js",
+      "name": "./lib/src/Mobile/About.js",
+      "file": "4.bundle.js",
+      "publicPath": "4.bundle.js"
+    }
+  ],
+  "./Home": [
+    {
+      "id": "./lib/src/Mobile/Home.js",
+      "name": "./lib/src/Mobile/Home.js",
+      "file": "5.bundle.js",
+      "publicPath": "5.bundle.js"
+    }
+  ],
+  "./Desktop/App": [
+    {
+      "id": "./lib/src/Desktop/App.js",
+      "name": "./lib/src/Desktop/App.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
+    }
+  ],
+  "./routes": [
+    {
+      "id": "./lib/src/Desktop/routes.js",
+      "name": "./lib/src/Desktop/routes.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": "./lib/src/Mobile/routes.js",
+      "name": "./lib/src/Mobile/routes.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    }
+  ],
+  "../LoadableHOC": [
+    {
+      "id": "./lib/src/LoadableHOC.js",
+      "name": "./lib/src/LoadableHOC.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    }
+  ],
+  "./Mobile/App": [
+    {
+      "id": "./lib/src/Mobile/App.js",
+      "name": "./lib/src/Mobile/App.js",
+      "file": "client.js",
+      "publicPath": "client.js"
     }
   ],
   "./lib/src/client.js": [
@@ -20,7 +346,7 @@
       "id": "./lib/src/client.js",
       "name": "./lib/src/client.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./actions": [
@@ -28,7 +354,7 @@
       "id": "./lib/src/redux/actions.js",
       "name": "./lib/src/redux/actions.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./redux/configureStore": [
@@ -36,7 +362,7 @@
       "id": "./lib/src/redux/configureStore.js",
       "name": "./lib/src/redux/configureStore.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./reducers": [
@@ -44,15 +370,15 @@
       "id": "./lib/src/redux/reducers.js",
       "name": "./lib/src/redux/reducers.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
-  "../response": [
+  "../redux/serverFetch": [
     {
-      "id": "./lib/src/response.js",
-      "name": "./lib/src/response.js",
+      "id": "./lib/src/redux/serverFetch.js",
+      "name": "./lib/src/redux/serverFetch.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./assertThisInitialized": [
@@ -60,7 +386,7 @@
       "id": "./node_modules/@babel/runtime/helpers/assertThisInitialized.js",
       "name": "./node_modules/@babel/runtime/helpers/assertThisInitialized.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/classCallCheck": [
@@ -68,7 +394,7 @@
       "id": "./node_modules/@babel/runtime/helpers/classCallCheck.js",
       "name": "./node_modules/@babel/runtime/helpers/classCallCheck.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/createClass": [
@@ -76,7 +402,7 @@
       "id": "./node_modules/@babel/runtime/helpers/createClass.js",
       "name": "./node_modules/@babel/runtime/helpers/createClass.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/defineProperty": [
@@ -84,7 +410,7 @@
       "id": "./node_modules/@babel/runtime/helpers/defineProperty.js",
       "name": "./node_modules/@babel/runtime/helpers/defineProperty.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/esm/assertThisInitialized": [
@@ -92,7 +418,7 @@
       "id": "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js",
       "name": "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/esm/extends": [
@@ -100,7 +426,7 @@
       "id": "./node_modules/@babel/runtime/helpers/esm/extends.js",
       "name": "./node_modules/@babel/runtime/helpers/esm/extends.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/esm/inheritsLoose": [
@@ -108,7 +434,7 @@
       "id": "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js",
       "name": "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose": [
@@ -116,7 +442,7 @@
       "id": "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
       "name": "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/extends": [
@@ -124,7 +450,7 @@
       "id": "./node_modules/@babel/runtime/helpers/extends.js",
       "name": "./node_modules/@babel/runtime/helpers/extends.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/getPrototypeOf": [
@@ -132,7 +458,7 @@
       "id": "./node_modules/@babel/runtime/helpers/getPrototypeOf.js",
       "name": "./node_modules/@babel/runtime/helpers/getPrototypeOf.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/inherits": [
@@ -140,7 +466,7 @@
       "id": "./node_modules/@babel/runtime/helpers/inherits.js",
       "name": "./node_modules/@babel/runtime/helpers/inherits.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/interopRequireDefault": [
@@ -148,7 +474,7 @@
       "id": "./node_modules/@babel/runtime/helpers/interopRequireDefault.js",
       "name": "./node_modules/@babel/runtime/helpers/interopRequireDefault.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/interopRequireWildcard": [
@@ -156,7 +482,7 @@
       "id": "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js",
       "name": "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/objectWithoutProperties": [
@@ -164,7 +490,7 @@
       "id": "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js",
       "name": "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./objectWithoutPropertiesLoose": [
@@ -172,7 +498,7 @@
       "id": "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js",
       "name": "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@babel/runtime/helpers/possibleConstructorReturn": [
@@ -180,7 +506,7 @@
       "id": "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js",
       "name": "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./setPrototypeOf": [
@@ -188,7 +514,7 @@
       "id": "./node_modules/@babel/runtime/helpers/setPrototypeOf.js",
       "name": "./node_modules/@babel/runtime/helpers/setPrototypeOf.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../helpers/typeof": [
@@ -196,39 +522,23 @@
       "id": "./node_modules/@babel/runtime/helpers/typeof.js",
       "name": "./node_modules/@babel/runtime/helpers/typeof.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
-  "@material-ui/core/Paper/Paper": [
+  "./CircularProgress": [
     {
-      "id": "./node_modules/@material-ui/core/Paper/Paper.js",
-      "name": "./node_modules/@material-ui/core/Paper/Paper.js",
+      "id": "./node_modules/@material-ui/core/CircularProgress/CircularProgress.js",
+      "name": "./node_modules/@material-ui/core/CircularProgress/CircularProgress.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
-  "@material-ui/core/Paper": [
+  "@material-ui/core/CircularProgress": [
     {
-      "id": "./node_modules/@material-ui/core/Paper/index.js",
-      "name": "./node_modules/@material-ui/core/Paper/index.js",
+      "id": "./node_modules/@material-ui/core/CircularProgress/index.js",
+      "name": "./node_modules/@material-ui/core/CircularProgress/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "./Typography": [
-    {
-      "id": "./node_modules/@material-ui/core/Typography/Typography.js",
-      "name": "./node_modules/@material-ui/core/Typography/Typography.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "@material-ui/core/Typography": [
-    {
-      "id": "./node_modules/@material-ui/core/Typography/index.js",
-      "name": "./node_modules/@material-ui/core/Typography/index.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../colors/common": [
@@ -236,7 +546,7 @@
       "id": "./node_modules/@material-ui/core/colors/common.js",
       "name": "./node_modules/@material-ui/core/colors/common.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../colors/grey": [
@@ -244,7 +554,7 @@
       "id": "./node_modules/@material-ui/core/colors/grey.js",
       "name": "./node_modules/@material-ui/core/colors/grey.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../colors/indigo": [
@@ -252,7 +562,7 @@
       "id": "./node_modules/@material-ui/core/colors/indigo.js",
       "name": "./node_modules/@material-ui/core/colors/indigo.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../colors/pink": [
@@ -260,7 +570,7 @@
       "id": "./node_modules/@material-ui/core/colors/pink.js",
       "name": "./node_modules/@material-ui/core/colors/pink.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@material-ui/core/colors/purple": [
@@ -268,7 +578,7 @@
       "id": "./node_modules/@material-ui/core/colors/purple.js",
       "name": "./node_modules/@material-ui/core/colors/purple.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../colors/red": [
@@ -276,7 +586,7 @@
       "id": "./node_modules/@material-ui/core/colors/red.js",
       "name": "./node_modules/@material-ui/core/colors/red.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "warning": [
@@ -284,13 +594,13 @@
       "id": "./node_modules/@material-ui/core/node_modules/warning/warning.js",
       "name": "./node_modules/@material-ui/core/node_modules/warning/warning.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     },
     {
       "id": "./node_modules/warning/browser.js",
       "name": "./node_modules/warning/browser.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@material-ui/core/styles/MuiThemeProvider": [
@@ -298,7 +608,7 @@
       "id": "./node_modules/@material-ui/core/styles/MuiThemeProvider.js",
       "name": "./node_modules/@material-ui/core/styles/MuiThemeProvider.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./colorManipulator": [
@@ -306,7 +616,7 @@
       "id": "./node_modules/@material-ui/core/styles/colorManipulator.js",
       "name": "./node_modules/@material-ui/core/styles/colorManipulator.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./createBreakpoints": [
@@ -314,7 +624,7 @@
       "id": "./node_modules/@material-ui/core/styles/createBreakpoints.js",
       "name": "./node_modules/@material-ui/core/styles/createBreakpoints.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./createGenerateClassName": [
@@ -322,7 +632,7 @@
       "id": "./node_modules/@material-ui/core/styles/createGenerateClassName.js",
       "name": "./node_modules/@material-ui/core/styles/createGenerateClassName.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./createMixins": [
@@ -330,7 +640,7 @@
       "id": "./node_modules/@material-ui/core/styles/createMixins.js",
       "name": "./node_modules/@material-ui/core/styles/createMixins.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@material-ui/core/styles/createMuiTheme": [
@@ -338,7 +648,7 @@
       "id": "./node_modules/@material-ui/core/styles/createMuiTheme.js",
       "name": "./node_modules/@material-ui/core/styles/createMuiTheme.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./createPalette": [
@@ -346,7 +656,7 @@
       "id": "./node_modules/@material-ui/core/styles/createPalette.js",
       "name": "./node_modules/@material-ui/core/styles/createPalette.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./createTypography": [
@@ -354,7 +664,7 @@
       "id": "./node_modules/@material-ui/core/styles/createTypography.js",
       "name": "./node_modules/@material-ui/core/styles/createTypography.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./getStylesCreator": [
@@ -362,7 +672,7 @@
       "id": "./node_modules/@material-ui/core/styles/getStylesCreator.js",
       "name": "./node_modules/@material-ui/core/styles/getStylesCreator.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./getThemeProps": [
@@ -370,7 +680,7 @@
       "id": "./node_modules/@material-ui/core/styles/getThemeProps.js",
       "name": "./node_modules/@material-ui/core/styles/getThemeProps.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./jssPreset": [
@@ -378,7 +688,7 @@
       "id": "./node_modules/@material-ui/core/styles/jssPreset.js",
       "name": "./node_modules/@material-ui/core/styles/jssPreset.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./mergeClasses": [
@@ -386,7 +696,7 @@
       "id": "./node_modules/@material-ui/core/styles/mergeClasses.js",
       "name": "./node_modules/@material-ui/core/styles/mergeClasses.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./multiKeyStore": [
@@ -394,7 +704,7 @@
       "id": "./node_modules/@material-ui/core/styles/multiKeyStore.js",
       "name": "./node_modules/@material-ui/core/styles/multiKeyStore.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./reactJssContext": [
@@ -402,7 +712,7 @@
       "id": "./node_modules/@material-ui/core/styles/reactJssContext.js",
       "name": "./node_modules/@material-ui/core/styles/reactJssContext.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./shadows": [
@@ -410,7 +720,7 @@
       "id": "./node_modules/@material-ui/core/styles/shadows.js",
       "name": "./node_modules/@material-ui/core/styles/shadows.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./shape": [
@@ -418,7 +728,7 @@
       "id": "./node_modules/@material-ui/core/styles/shape.js",
       "name": "./node_modules/@material-ui/core/styles/shape.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./spacing": [
@@ -426,7 +736,7 @@
       "id": "./node_modules/@material-ui/core/styles/spacing.js",
       "name": "./node_modules/@material-ui/core/styles/spacing.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./themeListener": [
@@ -434,7 +744,7 @@
       "id": "./node_modules/@material-ui/core/styles/themeListener.js",
       "name": "./node_modules/@material-ui/core/styles/themeListener.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./transitions": [
@@ -442,7 +752,7 @@
       "id": "./node_modules/@material-ui/core/styles/transitions.js",
       "name": "./node_modules/@material-ui/core/styles/transitions.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../styles/withStyles": [
@@ -450,7 +760,7 @@
       "id": "./node_modules/@material-ui/core/styles/withStyles.js",
       "name": "./node_modules/@material-ui/core/styles/withStyles.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./zIndex": [
@@ -458,7 +768,7 @@
       "id": "./node_modules/@material-ui/core/styles/zIndex.js",
       "name": "./node_modules/@material-ui/core/styles/zIndex.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../utils/helpers": [
@@ -466,7 +776,7 @@
       "id": "./node_modules/@material-ui/core/utils/helpers.js",
       "name": "./node_modules/@material-ui/core/utils/helpers.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./chainPropTypes": [
@@ -474,7 +784,7 @@
       "id": "./node_modules/@material-ui/utils/chainPropTypes.js",
       "name": "./node_modules/@material-ui/utils/chainPropTypes.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./componentPropType": [
@@ -482,7 +792,7 @@
       "id": "./node_modules/@material-ui/utils/componentPropType.js",
       "name": "./node_modules/@material-ui/utils/componentPropType.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./exactProp": [
@@ -490,7 +800,7 @@
       "id": "./node_modules/@material-ui/utils/exactProp.js",
       "name": "./node_modules/@material-ui/utils/exactProp.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./getDisplayName": [
@@ -498,7 +808,7 @@
       "id": "./node_modules/@material-ui/utils/getDisplayName.js",
       "name": "./node_modules/@material-ui/utils/getDisplayName.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "@material-ui/utils": [
@@ -506,7 +816,7 @@
       "id": "./node_modules/@material-ui/utils/index.es.js",
       "name": "./node_modules/@material-ui/utils/index.es.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./ponyfillGlobal": [
@@ -514,7 +824,7 @@
       "id": "./node_modules/@material-ui/utils/ponyfillGlobal.js",
       "name": "./node_modules/@material-ui/utils/ponyfillGlobal.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "brcast": [
@@ -522,7 +832,7 @@
       "id": "./node_modules/brcast/dist/brcast.es.js",
       "name": "./node_modules/brcast/dist/brcast.es.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "classnames": [
@@ -530,7 +840,7 @@
       "id": "./node_modules/classnames/index.js",
       "name": "./node_modules/classnames/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./implementation": [
@@ -538,7 +848,7 @@
       "id": "./node_modules/create-react-context/lib/implementation.js",
       "name": "./node_modules/create-react-context/lib/implementation.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "create-react-context": [
@@ -546,7 +856,7 @@
       "id": "./node_modules/create-react-context/lib/index.js",
       "name": "./node_modules/create-react-context/lib/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./camelize": [
@@ -554,7 +864,7 @@
       "id": "./node_modules/css-vendor/lib/camelize.js",
       "name": "./node_modules/css-vendor/lib/camelize.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "css-vendor": [
@@ -562,7 +872,7 @@
       "id": "./node_modules/css-vendor/lib/index.js",
       "name": "./node_modules/css-vendor/lib/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./prefix": [
@@ -570,7 +880,7 @@
       "id": "./node_modules/css-vendor/lib/prefix.js",
       "name": "./node_modules/css-vendor/lib/prefix.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./supported-property": [
@@ -578,7 +888,7 @@
       "id": "./node_modules/css-vendor/lib/supported-property.js",
       "name": "./node_modules/css-vendor/lib/supported-property.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./supported-value": [
@@ -586,31 +896,7 @@
       "id": "./node_modules/css-vendor/lib/supported-value.js",
       "name": "./node_modules/css-vendor/lib/supported-value.js",
       "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "deep-equal": [
-    {
-      "id": "./node_modules/deep-equal/index.js",
-      "name": "./node_modules/deep-equal/index.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "./lib/is_arguments.js": [
-    {
-      "id": "./node_modules/deep-equal/lib/is_arguments.js",
-      "name": "./node_modules/deep-equal/lib/is_arguments.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "./lib/keys.js": [
-    {
-      "id": "./node_modules/deep-equal/lib/keys.js",
-      "name": "./node_modules/deep-equal/lib/keys.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "deepmerge": [
@@ -618,15 +904,7 @@
       "id": "./node_modules/deepmerge/dist/umd.js",
       "name": "./node_modules/deepmerge/dist/umd.js",
       "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "exenv": [
-    {
-      "id": "./node_modules/exenv/index.js",
-      "name": "./node_modules/exenv/index.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./emptyFunction": [
@@ -634,7 +912,7 @@
       "id": "./node_modules/fbjs/lib/emptyFunction.js",
       "name": "./node_modules/fbjs/lib/emptyFunction.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "fbjs/lib/warning": [
@@ -642,7 +920,7 @@
       "id": "./node_modules/fbjs/lib/warning.js",
       "name": "./node_modules/fbjs/lib/warning.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "gud": [
@@ -650,7 +928,7 @@
       "id": "./node_modules/gud/index.js",
       "name": "./node_modules/gud/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "history": [
@@ -658,7 +936,7 @@
       "id": "./node_modules/history/esm/history.js",
       "name": "./node_modules/history/esm/history.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "hoist-non-react-statics": [
@@ -666,7 +944,7 @@
       "id": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
       "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "hyphenate-style-name": [
@@ -674,7 +952,7 @@
       "id": "./node_modules/hyphenate-style-name/index.js",
       "name": "./node_modules/hyphenate-style-name/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "invariant": [
@@ -682,7 +960,7 @@
       "id": "./node_modules/invariant/browser.js",
       "name": "./node_modules/invariant/browser.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "is-in-browser": [
@@ -690,7 +968,7 @@
       "id": "./node_modules/is-in-browser/dist/module.js",
       "name": "./node_modules/is-in-browser/dist/module.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "is-plain-object": [
@@ -698,7 +976,7 @@
       "id": "./node_modules/is-plain-object/index.js",
       "name": "./node_modules/is-plain-object/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "isobject": [
@@ -706,7 +984,7 @@
       "id": "./node_modules/isobject/index.js",
       "name": "./node_modules/isobject/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "jss-camel-case": [
@@ -714,7 +992,7 @@
       "id": "./node_modules/jss-camel-case/lib/index.js",
       "name": "./node_modules/jss-camel-case/lib/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./defaultUnits": [
@@ -722,7 +1000,7 @@
       "id": "./node_modules/jss-default-unit/lib/defaultUnits.js",
       "name": "./node_modules/jss-default-unit/lib/defaultUnits.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "jss-default-unit": [
@@ -730,7 +1008,7 @@
       "id": "./node_modules/jss-default-unit/lib/index.js",
       "name": "./node_modules/jss-default-unit/lib/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "jss-global": [
@@ -738,7 +1016,7 @@
       "id": "./node_modules/jss-global/lib/index.js",
       "name": "./node_modules/jss-global/lib/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "jss-nested": [
@@ -746,7 +1024,7 @@
       "id": "./node_modules/jss-nested/lib/index.js",
       "name": "./node_modules/jss-nested/lib/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "jss-props-sort": [
@@ -754,7 +1032,7 @@
       "id": "./node_modules/jss-props-sort/lib/index.js",
       "name": "./node_modules/jss-props-sort/lib/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "jss-vendor-prefixer": [
@@ -762,7 +1040,7 @@
       "id": "./node_modules/jss-vendor-prefixer/lib/index.js",
       "name": "./node_modules/jss-vendor-prefixer/lib/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./Jss": [
@@ -770,7 +1048,7 @@
       "id": "./node_modules/jss/lib/Jss.js",
       "name": "./node_modules/jss/lib/Jss.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./PluginsRegistry": [
@@ -778,7 +1056,7 @@
       "id": "./node_modules/jss/lib/PluginsRegistry.js",
       "name": "./node_modules/jss/lib/PluginsRegistry.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./RuleList": [
@@ -786,7 +1064,7 @@
       "id": "./node_modules/jss/lib/RuleList.js",
       "name": "./node_modules/jss/lib/RuleList.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./SheetsManager": [
@@ -794,7 +1072,7 @@
       "id": "./node_modules/jss/lib/SheetsManager.js",
       "name": "./node_modules/jss/lib/SheetsManager.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./SheetsRegistry": [
@@ -802,7 +1080,7 @@
       "id": "./node_modules/jss/lib/SheetsRegistry.js",
       "name": "./node_modules/jss/lib/SheetsRegistry.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./StyleSheet": [
@@ -810,7 +1088,7 @@
       "id": "./node_modules/jss/lib/StyleSheet.js",
       "name": "./node_modules/jss/lib/StyleSheet.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "jss": [
@@ -818,7 +1096,7 @@
       "id": "./node_modules/jss/lib/index.js",
       "name": "./node_modules/jss/lib/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./plugins/functions": [
@@ -826,7 +1104,7 @@
       "id": "./node_modules/jss/lib/plugins/functions.js",
       "name": "./node_modules/jss/lib/plugins/functions.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./plugins/observables": [
@@ -834,7 +1112,7 @@
       "id": "./node_modules/jss/lib/plugins/observables.js",
       "name": "./node_modules/jss/lib/plugins/observables.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./plugins/rules": [
@@ -842,7 +1120,7 @@
       "id": "./node_modules/jss/lib/plugins/rules.js",
       "name": "./node_modules/jss/lib/plugins/rules.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./renderers/DomRenderer": [
@@ -850,7 +1128,7 @@
       "id": "./node_modules/jss/lib/renderers/DomRenderer.js",
       "name": "./node_modules/jss/lib/renderers/DomRenderer.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./renderers/VirtualRenderer": [
@@ -858,7 +1136,7 @@
       "id": "./node_modules/jss/lib/renderers/VirtualRenderer.js",
       "name": "./node_modules/jss/lib/renderers/VirtualRenderer.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../rules/ConditionalRule": [
@@ -866,7 +1144,7 @@
       "id": "./node_modules/jss/lib/rules/ConditionalRule.js",
       "name": "./node_modules/jss/lib/rules/ConditionalRule.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../rules/FontFaceRule": [
@@ -874,7 +1152,7 @@
       "id": "./node_modules/jss/lib/rules/FontFaceRule.js",
       "name": "./node_modules/jss/lib/rules/FontFaceRule.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../rules/KeyframesRule": [
@@ -882,7 +1160,7 @@
       "id": "./node_modules/jss/lib/rules/KeyframesRule.js",
       "name": "./node_modules/jss/lib/rules/KeyframesRule.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../rules/SimpleRule": [
@@ -890,7 +1168,7 @@
       "id": "./node_modules/jss/lib/rules/SimpleRule.js",
       "name": "./node_modules/jss/lib/rules/SimpleRule.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./rules/StyleRule": [
@@ -898,7 +1176,7 @@
       "id": "./node_modules/jss/lib/rules/StyleRule.js",
       "name": "./node_modules/jss/lib/rules/StyleRule.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../rules/ViewportRule": [
@@ -906,7 +1184,7 @@
       "id": "./node_modules/jss/lib/rules/ViewportRule.js",
       "name": "./node_modules/jss/lib/rules/ViewportRule.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./sheets": [
@@ -914,7 +1192,7 @@
       "id": "./node_modules/jss/lib/sheets.js",
       "name": "./node_modules/jss/lib/sheets.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../utils/cloneStyle": [
@@ -922,7 +1200,7 @@
       "id": "./node_modules/jss/lib/utils/cloneStyle.js",
       "name": "./node_modules/jss/lib/utils/cloneStyle.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./utils/createGenerateClassName": [
@@ -930,7 +1208,7 @@
       "id": "./node_modules/jss/lib/utils/createGenerateClassName.js",
       "name": "./node_modules/jss/lib/utils/createGenerateClassName.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./utils/createRule": [
@@ -938,7 +1216,7 @@
       "id": "./node_modules/jss/lib/utils/createRule.js",
       "name": "./node_modules/jss/lib/utils/createRule.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./utils/escape": [
@@ -946,7 +1224,7 @@
       "id": "./node_modules/jss/lib/utils/escape.js",
       "name": "./node_modules/jss/lib/utils/escape.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./utils/getDynamicStyles": [
@@ -954,7 +1232,7 @@
       "id": "./node_modules/jss/lib/utils/getDynamicStyles.js",
       "name": "./node_modules/jss/lib/utils/getDynamicStyles.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../utils/isObservable": [
@@ -962,7 +1240,7 @@
       "id": "./node_modules/jss/lib/utils/isObservable.js",
       "name": "./node_modules/jss/lib/utils/isObservable.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./utils/linkRule": [
@@ -970,7 +1248,7 @@
       "id": "./node_modules/jss/lib/utils/linkRule.js",
       "name": "./node_modules/jss/lib/utils/linkRule.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./moduleId": [
@@ -978,7 +1256,7 @@
       "id": "./node_modules/jss/lib/utils/moduleId.js",
       "name": "./node_modules/jss/lib/utils/moduleId.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../utils/toCss": [
@@ -986,7 +1264,7 @@
       "id": "./node_modules/jss/lib/utils/toCss.js",
       "name": "./node_modules/jss/lib/utils/toCss.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./utils/toCssValue": [
@@ -994,15 +1272,7 @@
       "id": "./node_modules/jss/lib/utils/toCssValue.js",
       "name": "./node_modules/jss/lib/utils/toCssValue.js",
       "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "node-fetch": [
-    {
-      "id": "./node_modules/node-fetch/browser.js",
-      "name": "./node_modules/node-fetch/browser.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "object-assign": [
@@ -1010,7 +1280,7 @@
       "id": "./node_modules/object-assign/index.js",
       "name": "./node_modules/object-assign/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "prop-types/checkPropTypes": [
@@ -1018,7 +1288,7 @@
       "id": "./node_modules/prop-types/checkPropTypes.js",
       "name": "./node_modules/prop-types/checkPropTypes.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./factoryWithTypeCheckers": [
@@ -1026,7 +1296,7 @@
       "id": "./node_modules/prop-types/factoryWithTypeCheckers.js",
       "name": "./node_modules/prop-types/factoryWithTypeCheckers.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "prop-types": [
@@ -1034,7 +1304,7 @@
       "id": "./node_modules/prop-types/index.js",
       "name": "./node_modules/prop-types/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./lib/ReactPropTypesSecret": [
@@ -1042,7 +1312,7 @@
       "id": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
       "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./cjs/react-dom.development.js": [
@@ -1050,7 +1320,7 @@
       "id": "./node_modules/react-dom/cjs/react-dom.development.js",
       "name": "./node_modules/react-dom/cjs/react-dom.development.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "react-dom": [
@@ -1058,31 +1328,7 @@
       "id": "./node_modules/react-dom/index.js",
       "name": "./node_modules/react-dom/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "react-helmet": [
-    {
-      "id": "./node_modules/react-helmet/lib/Helmet.js",
-      "name": "./node_modules/react-helmet/lib/Helmet.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "./HelmetConstants.js": [
-    {
-      "id": "./node_modules/react-helmet/lib/HelmetConstants.js",
-      "name": "./node_modules/react-helmet/lib/HelmetConstants.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "./HelmetUtils.js": [
-    {
-      "id": "./node_modules/react-helmet/lib/HelmetUtils.js",
-      "name": "./node_modules/react-helmet/lib/HelmetUtils.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./cjs/react-is.development.js": [
@@ -1090,7 +1336,7 @@
       "id": "./node_modules/react-is/cjs/react-is.development.js",
       "name": "./node_modules/react-is/cjs/react-is.development.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "react-is": [
@@ -1098,7 +1344,7 @@
       "id": "./node_modules/react-is/index.js",
       "name": "./node_modules/react-is/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "react-loadable": [
@@ -1106,7 +1352,7 @@
       "id": "./node_modules/react-loadable/lib/index.js",
       "name": "./node_modules/react-loadable/lib/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./components/Context": [
@@ -1114,7 +1360,7 @@
       "id": "./node_modules/react-redux/es/components/Context.js",
       "name": "./node_modules/react-redux/es/components/Context.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./components/Provider": [
@@ -1122,7 +1368,7 @@
       "id": "./node_modules/react-redux/es/components/Provider.js",
       "name": "./node_modules/react-redux/es/components/Provider.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./components/connectAdvanced": [
@@ -1130,7 +1376,7 @@
       "id": "./node_modules/react-redux/es/components/connectAdvanced.js",
       "name": "./node_modules/react-redux/es/components/connectAdvanced.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./connect/connect": [
@@ -1138,7 +1384,7 @@
       "id": "./node_modules/react-redux/es/connect/connect.js",
       "name": "./node_modules/react-redux/es/connect/connect.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./mapDispatchToProps": [
@@ -1146,7 +1392,7 @@
       "id": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
       "name": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./mapStateToProps": [
@@ -1154,7 +1400,7 @@
       "id": "./node_modules/react-redux/es/connect/mapStateToProps.js",
       "name": "./node_modules/react-redux/es/connect/mapStateToProps.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./mergeProps": [
@@ -1162,7 +1408,7 @@
       "id": "./node_modules/react-redux/es/connect/mergeProps.js",
       "name": "./node_modules/react-redux/es/connect/mergeProps.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./selectorFactory": [
@@ -1170,7 +1416,7 @@
       "id": "./node_modules/react-redux/es/connect/selectorFactory.js",
       "name": "./node_modules/react-redux/es/connect/selectorFactory.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./verifySubselectors": [
@@ -1178,7 +1424,7 @@
       "id": "./node_modules/react-redux/es/connect/verifySubselectors.js",
       "name": "./node_modules/react-redux/es/connect/verifySubselectors.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./wrapMapToProps": [
@@ -1186,7 +1432,7 @@
       "id": "./node_modules/react-redux/es/connect/wrapMapToProps.js",
       "name": "./node_modules/react-redux/es/connect/wrapMapToProps.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "react-redux": [
@@ -1194,7 +1440,7 @@
       "id": "./node_modules/react-redux/es/index.js",
       "name": "./node_modules/react-redux/es/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../utils/Subscription": [
@@ -1202,7 +1448,7 @@
       "id": "./node_modules/react-redux/es/utils/Subscription.js",
       "name": "./node_modules/react-redux/es/utils/Subscription.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./utils/batch": [
@@ -1210,7 +1456,7 @@
       "id": "./node_modules/react-redux/es/utils/batch.js",
       "name": "./node_modules/react-redux/es/utils/batch.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./isPlainObject": [
@@ -1218,7 +1464,7 @@
       "id": "./node_modules/react-redux/es/utils/isPlainObject.js",
       "name": "./node_modules/react-redux/es/utils/isPlainObject.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./utils/reactBatchedUpdates": [
@@ -1226,7 +1472,7 @@
       "id": "./node_modules/react-redux/es/utils/reactBatchedUpdates.js",
       "name": "./node_modules/react-redux/es/utils/reactBatchedUpdates.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../utils/shallowEqual": [
@@ -1234,7 +1480,7 @@
       "id": "./node_modules/react-redux/es/utils/shallowEqual.js",
       "name": "./node_modules/react-redux/es/utils/shallowEqual.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "../utils/verifyPlainObject": [
@@ -1242,7 +1488,7 @@
       "id": "./node_modules/react-redux/es/utils/verifyPlainObject.js",
       "name": "./node_modules/react-redux/es/utils/verifyPlainObject.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./warning": [
@@ -1250,7 +1496,7 @@
       "id": "./node_modules/react-redux/es/utils/warning.js",
       "name": "./node_modules/react-redux/es/utils/warning.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "react-router-dom": [
@@ -1258,7 +1504,7 @@
       "id": "./node_modules/react-router-dom/esm/react-router-dom.js",
       "name": "./node_modules/react-router-dom/esm/react-router-dom.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "react-router": [
@@ -1266,7 +1512,7 @@
       "id": "./node_modules/react-router/esm/react-router.js",
       "name": "./node_modules/react-router/esm/react-router.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "isarray": [
@@ -1274,7 +1520,7 @@
       "id": "./node_modules/react-router/node_modules/isarray/index.js",
       "name": "./node_modules/react-router/node_modules/isarray/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "path-to-regexp": [
@@ -1282,15 +1528,7 @@
       "id": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
       "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "react-side-effect": [
-    {
-      "id": "./node_modules/react-side-effect/lib/index.js",
-      "name": "./node_modules/react-side-effect/lib/index.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./cjs/react.development.js": [
@@ -1298,7 +1536,7 @@
       "id": "./node_modules/react/cjs/react.development.js",
       "name": "./node_modules/react/cjs/react.development.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "react": [
@@ -1306,7 +1544,7 @@
       "id": "./node_modules/react/index.js",
       "name": "./node_modules/react/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "redux-thunk": [
@@ -1314,7 +1552,7 @@
       "id": "./node_modules/redux-thunk/es/index.js",
       "name": "./node_modules/redux-thunk/es/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "redux": [
@@ -1322,7 +1560,7 @@
       "id": "./node_modules/redux/es/redux.js",
       "name": "./node_modules/redux/es/redux.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "resolve-pathname": [
@@ -1330,7 +1568,7 @@
       "id": "./node_modules/resolve-pathname/index.js",
       "name": "./node_modules/resolve-pathname/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./cjs/scheduler-tracing.development.js": [
@@ -1338,7 +1576,7 @@
       "id": "./node_modules/scheduler/cjs/scheduler-tracing.development.js",
       "name": "./node_modules/scheduler/cjs/scheduler-tracing.development.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./cjs/scheduler.development.js": [
@@ -1346,7 +1584,7 @@
       "id": "./node_modules/scheduler/cjs/scheduler.development.js",
       "name": "./node_modules/scheduler/cjs/scheduler.development.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "scheduler": [
@@ -1354,7 +1592,7 @@
       "id": "./node_modules/scheduler/index.js",
       "name": "./node_modules/scheduler/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "scheduler/tracing": [
@@ -1362,15 +1600,7 @@
       "id": "./node_modules/scheduler/tracing.js",
       "name": "./node_modules/scheduler/tracing.js",
       "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "shallowequal": [
-    {
-      "id": "./node_modules/shallowequal/index.js",
-      "name": "./node_modules/shallowequal/index.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "symbol-observable": [
@@ -1378,7 +1608,7 @@
       "id": "./node_modules/symbol-observable/es/index.js",
       "name": "./node_modules/symbol-observable/es/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./ponyfill.js": [
@@ -1386,7 +1616,7 @@
       "id": "./node_modules/symbol-observable/es/ponyfill.js",
       "name": "./node_modules/symbol-observable/es/ponyfill.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "tiny-invariant": [
@@ -1394,7 +1624,7 @@
       "id": "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js",
       "name": "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "tiny-warning": [
@@ -1402,7 +1632,7 @@
       "id": "./node_modules/tiny-warning/dist/tiny-warning.esm.js",
       "name": "./node_modules/tiny-warning/dist/tiny-warning.esm.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "value-equal": [
@@ -1410,7 +1640,7 @@
       "id": "./node_modules/value-equal/index.js",
       "name": "./node_modules/value-equal/index.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./../../webpack/buildin/global.js": [
@@ -1418,7 +1648,7 @@
       "id": "./node_modules/webpack/buildin/global.js",
       "name": "./node_modules/webpack/buildin/global.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ],
   "./../../webpack/buildin/harmony-module.js": [
@@ -1426,7 +1656,7 @@
       "id": "./node_modules/webpack/buildin/harmony-module.js",
       "name": "./node_modules/webpack/buildin/harmony-module.js",
       "file": "client.js",
-      "publicPath": "/client.js"
+      "publicPath": "client.js"
     }
   ]
 }
