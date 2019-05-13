@@ -12,9 +12,8 @@
     "build:compile": "babel lib -d dist",
     "start": "NODE_ENV=development nodemon lib/index.js",
     "rm:dist": "rimraf dist",
-    "build:dev": "webpack --mode development --config webpack.dev.js",
     "build:prod": "webpack --mode production --config webpack.prod.js",
-    "build:demo": "webpack --mode development --config webpack.client.config.js"
+    "build:dev": "webpack --mode development --config webpack.client.config.js"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
@@ -45,6 +44,7 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-dynamic-import-node": "^2.2.0",
     "babel-plugin-root-import": "^6.1.0",
+    "chalk": "^2.4.2",
     "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -56,13 +56,24 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-standard": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
     "nodemon": "^1.18.11",
     "path": "^0.12.7",
+    "prettier": "^1.17.0",
     "rimraf": "^2.6.3",
     "webpack": "^4.30.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.1",
     "webpack-manifest-plugin": "^2.0.4",
     "webpack-merge": "^4.2.1"
+  },
+  "lint-staged": {
+    "lib/**/*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
