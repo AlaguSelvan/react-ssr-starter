@@ -4,6 +4,8 @@ const { resolve } = require('path')
 const smart = require('webpack-merge')
 const common = require('./webpack.config')
 
+console.log(process.env.NODE_ENV, 'process.env.NODE_ENV')
+
 const config =
   process.env.NODE_ENV === 'production'
     ? require('./webpack.client.prod')
