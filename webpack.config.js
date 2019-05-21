@@ -5,7 +5,7 @@ const webpack = require('webpack')
 
 const common = {
   entry: {
-    client: './lib/src/client.js'
+    client: './lib/src/client/client.js'
   },
   output: {
     path: resolve(__dirname, 'lib/public'),

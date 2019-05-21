@@ -4,7 +4,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const config = {
   mode: 'production',
   entry: {
-    client: './lib/src/client.js'
+    client: './lib/src/client/client.js'
   },
   output: {
     filename: '[name].[contenthash].bundle.js',

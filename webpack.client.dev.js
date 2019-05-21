@@ -4,7 +4,7 @@ const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugi
 const config = {
   mode: 'development',
   entry: {
-    client: './lib/src/client.js'
+    client: './lib/src/client/client.js'
   },
   module: {
     rules: [
