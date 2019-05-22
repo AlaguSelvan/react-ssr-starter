@@ -13,7 +13,7 @@ const config = {
     ]
   },
   plugins: [new ReactLoadablePlugin({
-    filename: './lib/public/react-loadable.json'
+    filename: './public/react-loadable.json'
   })]
 }
 

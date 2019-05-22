@@ -6,7 +6,7 @@ module.exports = {
     client: './lib/src/client/client.js'
   },
   output: {
-    path: resolve(__dirname, 'lib/public'),
+    path: resolve(__dirname, 'public'),
     chunkFilename: '[name].bundle.js'
   },
   devtool: 'inline-cheap-module-source-map',
@@ -17,7 +17,7 @@ module.exports = {
   },
   plugins: [
     new ReactLoadablePlugin({
-      filename: './lib/public/react-loadable.json'
+      filename: './public/react-loadable.json'
     })
   ]
 }

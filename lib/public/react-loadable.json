@@ -55,48 +55,6 @@
       "publicPath": "0.bundle.js.map"
     }
   ],
-  "deep-equal": [
-    {
-      "id": "./node_modules/deep-equal/index.js",
-      "name": "./node_modules/deep-equal/index.js",
-      "file": "0.bundle.js",
-      "publicPath": "0.bundle.js"
-    },
-    {
-      "id": "./node_modules/deep-equal/index.js",
-      "name": "./node_modules/deep-equal/index.js",
-      "file": "0.bundle.js.map",
-      "publicPath": "0.bundle.js.map"
-    }
-  ],
-  "./lib/is_arguments.js": [
-    {
-      "id": "./node_modules/deep-equal/lib/is_arguments.js",
-      "name": "./node_modules/deep-equal/lib/is_arguments.js",
-      "file": "0.bundle.js",
-      "publicPath": "0.bundle.js"
-    },
-    {
-      "id": "./node_modules/deep-equal/lib/is_arguments.js",
-      "name": "./node_modules/deep-equal/lib/is_arguments.js",
-      "file": "0.bundle.js.map",
-      "publicPath": "0.bundle.js.map"
-    }
-  ],
-  "./lib/keys.js": [
-    {
-      "id": "./node_modules/deep-equal/lib/keys.js",
-      "name": "./node_modules/deep-equal/lib/keys.js",
-      "file": "0.bundle.js",
-      "publicPath": "0.bundle.js"
-    },
-    {
-      "id": "./node_modules/deep-equal/lib/keys.js",
-      "name": "./node_modules/deep-equal/lib/keys.js",
-      "file": "0.bundle.js.map",
-      "publicPath": "0.bundle.js.map"
-    }
-  ],
   "exenv": [
     {
       "id": "./node_modules/exenv/index.js",
@@ -107,6 +65,20 @@
     {
       "id": "./node_modules/exenv/index.js",
       "name": "./node_modules/exenv/index.js",
+      "file": "0.bundle.js.map",
+      "publicPath": "0.bundle.js.map"
+    }
+  ],
+  "react-fast-compare": [
+    {
+      "id": "./node_modules/react-fast-compare/index.js",
+      "name": "./node_modules/react-fast-compare/index.js",
+      "file": "0.bundle.js",
+      "publicPath": "0.bundle.js"
+    },
+    {
+      "id": "./node_modules/react-fast-compare/index.js",
+      "name": "./node_modules/react-fast-compare/index.js",
       "file": "0.bundle.js.map",
       "publicPath": "0.bundle.js.map"
     }
@@ -289,20 +261,6 @@
     {
       "id": "./lib/src/client/pages/Desktop/App.js",
       "name": "./lib/src/client/pages/Desktop/App.js",
-      "file": "client.js.map",
-      "publicPath": "client.js.map"
-    }
-  ],
-  "./pages/Mobile/App": [
-    {
-      "id": "./lib/src/client/pages/Mobile/App.js",
-      "name": "./lib/src/client/pages/Mobile/App.js",
-      "file": "client.js",
-      "publicPath": "client.js"
-    },
-    {
-      "id": "./lib/src/client/pages/Mobile/App.js",
-      "name": "./lib/src/client/pages/Mobile/App.js",
       "file": "client.js.map",
       "publicPath": "client.js.map"
     }
@@ -2293,7 +2251,7 @@
       "publicPath": "client.js.map"
     }
   ],
-  "./warning": [
+  "../utils/warning": [
     {
       "id": "./node_modules/react-redux/es/utils/warning.js",
       "name": "./node_modules/react-redux/es/utils/warning.js",

@@ -11,7 +11,7 @@ const config =
 
 const base = {
   output: {
-    path: resolve(__dirname, 'lib/public')
+    path: resolve(__dirname, 'public')
   }
 }
 

@@ -1,4 +1,3 @@
-'use strict'
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const CompressionPlugin = require('compression-webpack-plugin')
 const webpack = require('webpack')
