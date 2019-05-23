@@ -1,3 +1,4 @@
+const { resolve } = require('path')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const CompressionPlugin = require('compression-webpack-plugin')
 const webpack = require('webpack')
@@ -8,6 +9,7 @@ const config = {
     client: './lib/src/client/client.js'
   },
   output: {
+    path: resolve('dist/public'),
     filename: '[name].[contenthash].bundle.js',
     chunkFilename: '[name].[contenthash].[id].bundle.js'
   },

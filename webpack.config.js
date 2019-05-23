@@ -12,7 +12,7 @@ const common = {
     client: './lib/src/client/client.js'
   },
   output: {
-    path: resolve(__dirname, 'public'),
+    path: resolve('dist/public'),
     chunkFilename: '[name].bundle.js'
   },
   devtool: 'inline-cheap-module-source-map',
@@ -28,9 +28,6 @@ const common = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               publicPath: (resourcePath, context) => {
-                // publicPath is the relative path of the resource to the context
-                // e.g. for ./css/admin/main.css the publicPath will be ../../
-                // while for ./css/main.css the publicPath will be ../
                 return path.relative(path.dirname(resourcePath), context) + '/'
               }
             }
@@ -42,7 +39,7 @@ const common = {
   },
   plugins: [
     new ReactLoadablePlugin({
-      filename: './lib/public/react-loadable.json'
+      filename: resolve('dist/public/react-loadable.json')
     }),
     new MiniCssExtractPlugin({
       filename: devMode ? '[name].css' : '[name].[hash].css',

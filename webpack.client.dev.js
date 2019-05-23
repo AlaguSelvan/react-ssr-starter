@@ -14,7 +14,7 @@ const config = {
   },
   plugins: [
     new ReactLoadablePlugin({
-      filename: './public/react-loadable.json'
+      filename: './dist/public/react-loadable.json'
     })
   ]
 }
