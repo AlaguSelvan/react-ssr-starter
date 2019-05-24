@@ -6,7 +6,7 @@ const config = {
   entry: {
     client: './lib/src/client/client.js'
   },
-  devtool: 'cheap-module-source-map',
+  devtool: 'inline-cheap-module-source-map',
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
