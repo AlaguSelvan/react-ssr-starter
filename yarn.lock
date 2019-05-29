@@ -699,7 +699,7 @@
     pirates "^4.0.0"
     source-map-support "^0.5.9"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.3":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3", "@babel/runtime@^7.4.4":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.5.tgz#582bb531f5f9dc67d2fcb682979894f75e253f12"
   integrity sha512-TuI4qpWZP6lGOGIuGWtp9sPluqYICmbk8T/1vpSysqJxRPkudh/ofFWyqdcMsDf2s7KvDL4/YHgKyvcS3g9CJQ==
@@ -743,6 +743,14 @@
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.7.1.tgz#9833722341379fb7d67f06a4b00ab3c37913da53"
   integrity sha512-OYpa/Sg+2GDX+jibUfpZVn1YqSVRpYmTLF2eyAfrFTIJSbwyIrc+YscayoykvaOME/wV4BV0Sa0yqdMrgse6mA==
+
+"@loadable/component@^5.10.1":
+  version "5.10.1"
+  resolved "https://registry.yarnpkg.com/@loadable/component/-/component-5.10.1.tgz#09613e46d409ffacb3b4403658ed90adbc01ba24"
+  integrity sha512-nYb38UbPWCWB9R8US4Za0JzgjS1QaY13STJhU7ZUsfO2qG3k5huppVF92eX2iauhfpdrRkCDQqi+Fg/US4FXIg==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    hoist-non-react-statics "^3.3.0"
 
 "@material-ui/core@^3.9.3":
   version "3.9.3"
@@ -1284,6 +1292,23 @@ babel-plugin-dynamic-import-node@^2.2.0:
   integrity sha512-fP899ELUnTaBcIzmrW7nniyqqdYWrWuJUyPWHxFa/c7r7hS6KC8FscNfLlBNIoPSc55kYMGEEKjPjJGCLbE1qA==
   dependencies:
     object.assign "^4.1.0"
+
+babel-plugin-macros@^2.2.2:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.5.1.tgz#4a119ac2c2e19b458c259b9accd7ee34fd57ec6f"
+  integrity sha512-xN3KhAxPzsJ6OQTktCanNpIFnnMsCV+t8OloKxIL72D6+SUZYFn9qfklPgef5HyyDtzYZqqb+fs1S12+gQY82Q==
+  dependencies:
+    "@babel/runtime" "^7.4.2"
+    cosmiconfig "^5.2.0"
+    resolve "^1.10.0"
+
+babel-plugin-preval@^3.0.0, babel-plugin-preval@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-preval/-/babel-plugin-preval-3.0.1.tgz#a26f9690114a864a54a5cbdf865496ebf541a9c3"
+  integrity sha512-s8hmTlRSmzcL7cHSIi0s6WxmpOAxfIlWqSVQwBIt7V5bNBaac+8JMZ6kJXLOazMJ8gCIcb5AJgQUgPHvbSYUzw==
+  dependencies:
+    babel-plugin-macros "^2.2.2"
+    require-from-string "^2.0.2"
 
 babel-plugin-root-import@^6.1.0:
   version "6.2.0"
@@ -5202,6 +5227,13 @@ prettier@^1.17.0:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.17.1.tgz#ed64b4e93e370cb8a25b9ef7fef3e4fd1c0995db"
   integrity sha512-TzGRNvuUSmPgwivDqkZ9tM/qTGW9hqDKWOE9YHiyQdixlKbv7kvEqsmDPrcHJTKwthU774TQwZXVtaQ/mMsvjg==
 
+preval.macro@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/preval.macro/-/preval.macro-3.0.0.tgz#8003a4f19f8f50a22e71da9d2e931c89ba17fdbd"
+  integrity sha512-vGSGpDb4V+fGrh5em63YsyzlgQhWCZling7WbkPzgAhT7/88O1lk6dS51+2cfnjzoj00X2Q4Um+WX5Eshk/ulg==
+  dependencies:
+    babel-plugin-preval "^3.0.0"
+
 private@^0.1.6:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -5346,6 +5378,11 @@ querystring@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
   integrity sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
+
+ramda@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
+  integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
@@ -5700,7 +5737,7 @@ require-directory@^2.1.1:
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
   integrity sha1-jGStX9MNqxyXbiNE/+f3kqam30I=
 
-require-from-string@^2.0.1:
+require-from-string@^2.0.1, require-from-string@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
   integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
