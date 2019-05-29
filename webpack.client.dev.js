@@ -1,9 +1,14 @@
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
+const { resolve } = require('path')
 
 const config = {
   mode: 'development',
   entry: {
     client: './lib/src/client/client.js'
+  },
+  output: {
+    path: resolve('dist/public'),
+    publicPath: '/public/'
   },
   devtool: 'inline-cheap-module-source-map',
   module: {

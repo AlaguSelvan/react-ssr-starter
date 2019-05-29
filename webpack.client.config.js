@@ -11,7 +11,8 @@ const config =
 
 const base = {
   output: {
-    path: resolve('dist/public')
+    path: resolve('dist/public'),
+    publicPath: '/public'
   }
 }
 

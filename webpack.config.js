@@ -18,7 +18,17 @@ const common = {
   devtool: 'inline-cheap-module-source-map',
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+      { test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            publicPath: (resourcePath, context) => {
+              return path.relative(path.dirname(resourcePath), context) + '/'
+            }
+          }
+        ]
+      }
     ],
     rules: [
       {
