@@ -3,14 +3,15 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const CompressionPlugin = require('compression-webpack-plugin')
 const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const BrotliPlugin = require('brotli-webpack-plugin')
 
 const config = {
   mode: 'production',
   entry: {
-    client: resolve('src', 'client', 'index.tsx'),
-    vendor: ['react', 'material-ui', 'react-dom']
+    client: resolve('dist', 'src', 'client', 'client.js')
   },
   output: {
+    // main file
     filename: '[name].[contenthash].bundle.js',
     chunkFilename: '[name].[contenthash].[id].bundle.js'
   },
@@ -24,32 +25,35 @@ const config = {
     ]
   },
   plugins: [
+    new CompressionPlugin({
+      filename: '[path].br[query]',
+      algorithm: 'brotliCompress',
+      test: /\.(js|css|html|svg)$/,
+      compressionOptions: { level: 20 },
+      threshold: 10240,
+      minRatio: 1.6,
+      deleteOriginalAssets: false
+    }),
+    new BrotliPlugin({
+      asset: '[path].br[query]',
+      test: /\.js$/,
+      threshold: 10240,
+      minRatio: 1.6
+    }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: Infinity
-    }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false
-    }),
-    new CompressionPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.js$|\.css$|\.html$/,
-      threshold: 10240,
-      minRatio: 0.8
     })
   ],
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
-        // test: /\.js(\?.*)?$/i,
         test: /\.js$/,
         cache: true,
         parallel: 4,
@@ -58,10 +62,9 @@ const config = {
     ],
     splitChunks: {
       chunks: 'async',
-      minSize: 30000,
-      maxSize: 0,
-      minChunks: 1,
-      maxAsyncRequests: 5,
+      minSize: 0,
+      minChunks: 4,
+      maxAsyncRequests: 1,
       maxInitialRequests: 1,
       automaticNameDelimiter: '.',
       name: true,

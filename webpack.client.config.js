@@ -6,8 +6,8 @@ const common = require('./webpack.config')
 
 const config =
   process.env.NODE_ENV === 'production'
-    ? require('./webpack.client.dev')
-    : require('./webpack.client.dev')
+    ? require('./webpack.client.prod')
+    : require('./webpack.client.prod')
 
 const base = {
   output: {
