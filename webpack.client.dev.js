@@ -1,45 +1,52 @@
-const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
 const { resolve } = require('path')
+const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const config = {
   mode: 'development',
   entry: {
-    client: './lib/src/client/client.js'
+    client: resolve('lib', 'src', 'client', 'client.js')
   },
   output: {
-    path: resolve('dist/public'),
+    filename: '[name].js',
     publicPath: '/public/'
   },
   devtool: 'inline-cheap-module-source-map',
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }
     ]
   },
   plugins: [
     new ReactLoadablePlugin({
       filename: './dist/public/react-loadable.json'
+    }),
+    new CleanWebpackPlugin({
+      dry: true,
+      verbose: true,
+      cleanStaleWebpackAssets: false,
+      protectWebpackAssets: false,
+      cleanAfterEveryBuildPatterns: ['dist']
     })
   ],
   optimization: {
     splitChunks: {
-      chunks: 'async',
-      minSize: 30000,
-      maxSize: 0,
+      chunks: 'all',
+      minSize: 0,
       minChunks: 1,
-      maxAsyncRequests: 5,
+      maxAsyncRequests: 1,
       maxInitialRequests: 1,
       automaticNameDelimiter: '.',
       name: true,
       cacheGroups: {
         vendors: {
+          chunks: 'all',
           test: /[\\/]node_modules[\\/]/,
           priority: -10,
-          reuseExistingChunk: true
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
           reuseExistingChunk: true
         }
       }

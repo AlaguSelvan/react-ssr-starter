@@ -1,0 +1,182 @@
+{
+  "errors": [
+    "./lib/src/client/client.js 30:4\nModule parse failed: Unexpected token (30:4)\nYou may need an appropriate loader to handle this file type.\n| Loadable.preloadReady().then(() => {\r\n|   ReactDOM.hydrate(\r\n>     <Provider store={store}>\r\n|       <MuiThemeProvider theme={theme}>\r\n|         <Router>\r"
+  ],
+  "warnings": [
+    "configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
+  ],
+  "version": "4.32.2",
+  "hash": "71d65608e39269cd0491",
+  "time": 122,
+  "builtAt": 1559193958825,
+  "publicPath": "",
+  "outputPath": "/c/Users/alagu/react-starter-kit/dist/public",
+  "assetsByChunkName": {
+    "client": "client.js"
+  },
+  "assets": [
+    {
+      "name": "client.js",
+      "size": 5527,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "client"
+      ],
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "client": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "client.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "client": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "client.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 293,
+      "names": [
+        "client"
+      ],
+      "files": [
+        "client.js"
+      ],
+      "hash": "1d612bfd6240c6c3037a",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [
+        {
+          "id": "./lib/src/client/client.js",
+          "identifier": "/c/Users/alagu/react-starter-kit/lib/src/client/client.js",
+          "name": "./lib/src/client/client.js",
+          "index": 0,
+          "index2": 0,
+          "size": 293,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 49,
+            "building": 13
+          },
+          "failed": true,
+          "errors": 1,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "./lib/src/client/client.js",
+              "loc": "client"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 0,
+          "source": "throw new Error(\"Module parse failed: Unexpected token (30:4)\\nYou may need an appropriate loader to handle this file type.\\n| Loadable.preloadReady().then(() => {\\r\\n|   ReactDOM.hydrate(\\r\\n>     <Provider store={store}>\\r\\n|       <MuiThemeProvider theme={theme}>\\r\\n|         <Router>\\r\");"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "client",
+          "request": "./lib/src/client/client.js",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "./lib/src/client/client.js",
+      "identifier": "/c/Users/alagu/react-starter-kit/lib/src/client/client.js",
+      "name": "./lib/src/client/client.js",
+      "index": 0,
+      "index2": 0,
+      "size": 293,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "profile": {
+        "factory": 49,
+        "building": 13
+      },
+      "failed": true,
+      "errors": 1,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "./lib/src/client/client.js",
+          "loc": "client"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 0,
+      "source": "throw new Error(\"Module parse failed: Unexpected token (30:4)\\nYou may need an appropriate loader to handle this file type.\\n| Loadable.preloadReady().then(() => {\\r\\n|   ReactDOM.hydrate(\\r\\n>     <Provider store={store}>\\r\\n|       <MuiThemeProvider theme={theme}>\\r\\n|         <Router>\\r\");"
+    }
+  ],
+  "filteredModules": 0,
+  "children": []
+}

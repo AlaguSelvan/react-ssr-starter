@@ -9,7 +9,7 @@ const devMode = process.env.NODE_ENV !== 'production'
 
 const common = {
   entry: {
-    client: './lib/src/client/client.js'
+    client: resolve('lib', 'src', 'client', 'client.js')
   },
   output: {
     path: resolve('dist/public'),
