@@ -18,7 +18,8 @@ const common = {
   devtool: 'inline-cheap-module-source-map',
   module: {
     rules: [
-      { test: /\.js$/,
+      {
+        test: /\.js$/,
         exclude: /node_modules/,
         use: [
           {

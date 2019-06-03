@@ -42,13 +42,6 @@ const config = {
       filename: '[name].css',
       chunkFilename: '[id].css'
     })
-    // new CleanWebpackPlugin({
-    //   dry: true,
-    //   verbose: true,
-    //   cleanStaleWebpackAssets: false,
-    //   protectWebpackAssets: false,
-    //   cleanOnceBeforeBuildPatterns: ['**/*', 'dist']
-    // })
   ],
   optimization: {
     splitChunks: {
