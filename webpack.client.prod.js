@@ -4,6 +4,7 @@ const CompressionPlugin = require('compression-webpack-plugin')
 const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const BrotliPlugin = require('brotli-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 const config = {
   mode: 'production',
@@ -11,7 +12,6 @@ const config = {
     client: resolve('dist', 'src', 'client', 'client.js')
   },
   output: {
-    // main file
     filename: '[name].[contenthash].bundle.js',
     chunkFilename: '[name].[contenthash].[id].bundle.js'
   },
@@ -56,6 +56,11 @@ const config = {
       new UglifyJsPlugin({
         test: /\.js$/,
         cache: true,
+        parallel: 4,
+        exclude: /node_modules/
+      }),
+      new TerserPlugin({
+        test: /\.js$/,
         parallel: 4,
         exclude: /node_modules/
       })
