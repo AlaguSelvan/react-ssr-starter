@@ -1,5 +1,7 @@
+const webpack = require('webpack')
 const { resolve } = require('path')
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
+const OfflinePlugin = require('offline-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const config = {
@@ -38,10 +40,28 @@ const config = {
     new ReactLoadablePlugin({
       filename: './dist/public/react-loadable.json'
     }),
+    new webpack.ProgressPlugin((percentage, message) => {
+      console.log(`${(percentage * 100).toFixed()}% ${message}`);
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
-    })
+    }),
+    new OfflinePlugin({
+		caches: {
+			main: [
+				'vendor.*.js',
+				'assets/icons.*.*'
+			],
+			additional: [':externals:'],
+			optional: [':rest:']
+		},
+		externals: [
+			'https://fonts.googleapis.com/css?family=Montserrat:100'
+		],
+		safeToUseOptionalCaches: true,
+		AppCache: false
+	})
   ],
   optimization: {
     splitChunks: {

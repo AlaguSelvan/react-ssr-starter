@@ -44,6 +44,9 @@ const config = {
       analyzerMode: 'static',
       openAnalyzer: false
     }),
+    new webpack.ProgressPlugin((percentage, message) => {
+      console.log(`${(percentage * 100).toFixed()}% ${message}`);
+    }),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new BundleAnalyzerPlugin({
