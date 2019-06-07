@@ -1,5 +1,6 @@
 import CleanCSS from 'clean-css'
-import { liveFiles } from '../../manifest/liveFiles'
+import { liveFiles } from '../../config/manifest/liveFiles'
+
 const cssOptions = {
   compatibility: {
     colors: {

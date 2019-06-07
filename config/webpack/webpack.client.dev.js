@@ -1,14 +1,14 @@
 const webpack = require('webpack')
 const { resolve } = require('path')
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
-const OfflinePlugin = require('offline-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const paths = require('../paths')
 
 const config = {
   mode: 'development',
   entry: {
-    client: resolve('lib', 'src', 'client', 'client.js')
+    client: paths.clientEntry
   },
   output: {
     filename: '[name].js',
@@ -39,7 +39,7 @@ const config = {
   },
   plugins: [
     new ReactLoadablePlugin({
-      filename: './dist/public/react-loadable.json'
+      filename: './build/public/react-loadable.json'
     }),
     new CaseSensitivePathsPlugin(),
     new webpack.ProgressPlugin((percentage, message) => {
@@ -48,22 +48,7 @@ const config = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
-    }),
-    new OfflinePlugin({
-		caches: {
-			main: [
-				'vendor.*.js',
-				'assets/icons.*.*'
-			],
-			additional: [':externals:'],
-			optional: [':rest:']
-		},
-		externals: [
-			'https://fonts.googleapis.com/css?family=Montserrat:100'
-		],
-		safeToUseOptionalCaches: true,
-		AppCache: false
-	})
+    })
   ],
   optimization: {
     splitChunks: {

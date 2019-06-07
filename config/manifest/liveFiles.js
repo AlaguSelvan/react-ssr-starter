@@ -4,7 +4,7 @@ import { compose, merge, filter, reduce, equals, last, split, map, head, converg
 
 const jsFilter = compose(equals('js'), last, split('.'))
 
-const jsFiles = compose(filter(jsFilter))(readdirSync('./dist/public'))
+const jsFiles = compose(filter(jsFilter))(readdirSync('./build/public'))
 const fileName = compose(head, split('.'))
 export const liveFiles = compose(
   reduce(merge, {}),

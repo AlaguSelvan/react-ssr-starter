@@ -12,7 +12,7 @@ const common = {
     client: resolve('lib', 'src', 'client', 'client.js')
   },
   output: {
-    path: resolve('dist/public'),
+    path: resolve('build/public'),
     chunkFilename: '[name].bundle.js'
   },
   devtool: 'inline-cheap-module-source-map',
@@ -50,7 +50,8 @@ const common = {
   },
   plugins: [
     new ReactLoadablePlugin({
-      filename: resolve('dist/public/react-loadable.json')
+      // filename: resolve('build/public/react-loadable.json')
+      filename: resolve('build', 'public', 'react-loadable.json')
     }),
     new MiniCssExtractPlugin({
       filename: devMode ? '[name].css' : '[name].[hash].css',

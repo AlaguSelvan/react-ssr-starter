@@ -11,23 +11,25 @@
     "yarn": "^1.13"
   },
   "scripts": {
-    "----- // START SCRIPTS // -----": "",
+    "---- // START DEVELOPMENT // ----": "",
     "start": "npm run build:setup && npm run build:dev && npm run start:dev",
+    "---- // START PRODUCTION // ----": "",
     "start:prod": "npm run build:setup && npm run build:compile && npm run build:prod && npm run start:live",
-    "start:dev": "NODE_ENV=development nodemon lib/index.js",
-    "start:live": "NODE_ENV=production nodemon dist/index.js",
+    "----- // POST BUILD // -----": "",
+    "start:dev": "NODE_ENV=development nodemon src/index.js",
+    "start:live": "NODE_ENV=production nodemon build/index.js",
     "----- // BUILD SCRIPTS // -----": "",
-    "build:compile": "babel lib -d dist",
     "build:setup": "npm run clean:dist && npm run build:dist",
-    "build:dist": "mkdir -p ./dist",
+    "build:compile": "babel src -d build",
+    "build:dist": "mkdir -p ./build",
     "build:prod": "set NODE_ENV=production && webpack --mode production --config config/webpack/webpack.client.config.js --progress",
     "build:dev": "set NODE_ENV=development && webpack --mode development --config config/webpack/webpack.client.config.js --progress",
     "----- // STAT SCRIPTS // -----": "",
     "stats": "webpack --profile --json > webpack-stats.json",
     "----- // CLEAN SCRIPTS // -----": "",
     "clean": "npm run clean:dist && npm run clean:public",
-    "clean:dist": "rimraf dist",
-    "clean:public": "rimraf dist/public",
+    "clean:dist": "rimraf build",
+    "clean:public": "rimraf build/public",
     "----- // TEST SCRIPTS // -----": "",
     "test": "jest"
   },
@@ -125,7 +127,7 @@
     "webpack-merge": "^4.2.1"
   },
   "lint-staged": {
-    "lib/**/*.js": [
+    "src/**/*.js": [
       "prettier --write",
       "eslint --fix",
       "git add"

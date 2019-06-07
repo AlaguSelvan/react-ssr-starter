@@ -10,7 +10,7 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const config = {
   mode: 'production',
   entry: {
-    client: resolve('dist', 'src', 'client', 'client.js')
+    client: resolve('build', 'client', 'client.js')
   },
   output: {
     filename: '[name].[contenthash].bundle.js',
