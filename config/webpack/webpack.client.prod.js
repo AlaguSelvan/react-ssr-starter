@@ -5,6 +5,7 @@ const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const BrotliPlugin = require('brotli-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 const config = {
   mode: 'production',
@@ -25,6 +26,7 @@ const config = {
     ]
   },
   plugins: [
+    new CaseSensitivePathsPlugin(),
     new CompressionPlugin({
       filename: '[path].br[query]',
       algorithm: 'brotliCompress',
