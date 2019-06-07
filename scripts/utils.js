@@ -9,7 +9,7 @@ const logMessage = (message, level = 'info') => {
           : level === 'info'
             ? 'blue'
             : 'white'
-  console.log(`[${new Date().toISOString()}]`, chalk[color](message));
+  console.log(`[${new Date().toISOString()}]`, chalk[color](message))
 }
 
 const compilerPromise = (name, compiler) => {

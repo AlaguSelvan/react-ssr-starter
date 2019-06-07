@@ -9,16 +9,27 @@ const devMode = process.env.NODE_ENV !== 'production'
 
 const common = {
   entry: {
-    client: './lib/src/client/client.js'
+    client: resolve('lib', 'src', 'client', 'client.js')
   },
   output: {
-    path: resolve('dist/public'),
+    path: resolve('build/public'),
     chunkFilename: '[name].bundle.js'
   },
   devtool: 'inline-cheap-module-source-map',
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            publicPath: (resourcePath, context) => {
+              return path.relative(path.dirname(resourcePath), context) + '/'
+            }
+          }
+        ]
+      }
     ],
     rules: [
       {
@@ -39,7 +50,8 @@ const common = {
   },
   plugins: [
     new ReactLoadablePlugin({
-      filename: resolve('dist/public/react-loadable.json')
+      // filename: resolve('build/public/react-loadable.json')
+      filename: resolve('build', 'public', 'react-loadable.json')
     }),
     new MiniCssExtractPlugin({
       filename: devMode ? '[name].css' : '[name].[hash].css',
