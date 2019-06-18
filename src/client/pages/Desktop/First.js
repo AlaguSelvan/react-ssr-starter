@@ -25,12 +25,12 @@ export default function First() {
     <>
       <Helmet>
         <title>React Ssr kit</title>
-        <meta name="description" content="React Ssr kit" />
+        <meta name="description" content="React First Page" />
       </Helmet>
       <Paper elevation={4} style={styles.paper} align="center">
-        <Typography variant="h5" style={styles.typography}>Hello From First Page Desktop</Typography>
+        <Typography variant="h5" style={styles.typography}>React Router Enabled 🔥</Typography>
         <Link to="/2" style={styles.link}>
-          <Typography variant="h5" style={styles.typography}>view next Page 👉</Typography>
+          <Typography variant="h5" style={styles.typography}>Go Forward 👉</Typography>
         </Link>
       </Paper>
     </>
