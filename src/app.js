@@ -19,7 +19,7 @@ app.use('/public', expressStaticGzip(paths.publicPath, {
 const PORT = process.env.PORT
 Loadable.preloadAll().then(() => {
   app.listen(PORT, () => {
-    console.log(`App is running on Port: https://localhost:${PORT}`)
+    console.log(`App is running on Port: localhost:${PORT}`)
   })
 })
 
