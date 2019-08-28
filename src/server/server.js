@@ -8,19 +8,20 @@ import { StaticRouter } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import { SheetsRegistry } from 'react-jss/lib/jss'
 import JssProvider from 'react-jss/lib/JssProvider'
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
+// import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
+import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
-import createGenerateClassName from '@material-ui/core/styles/createGenerateClassName'
+import createGenerateClassName from '@material-ui/styles/createGenerateClassName'
 import purple from '@material-ui/core/colors/purple'
-
 import App from '../client/pages/Desktop/App'
 // import MobileApp from '../client/pages/Mobile/App'
 import template from './template'
 
 export default function ssr(url, store, mobile) {
   const reactRouterContext = {}
-  const sheetsRegistry = new SheetsRegistry()
-  const sheetsManager = new Map()
+  // const sheetsRegistry = new SheetsRegistry()
+  const sheets = new ServerStyleSheets()
+  // const sheetsManager = new Map()
 
   const theme = createMuiTheme({
     palette: {
@@ -38,22 +39,25 @@ export default function ssr(url, store, mobile) {
   let modules = []
 
   let content = renderToString(
-    <StaticRouter location={url} context={reactRouterContext}>
-      <Provider store={store} >
-        <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}>
-          <MuiThemeProvider theme={theme} sheetsManager={sheetsManager}>
+    sheets.collect(
+      <StaticRouter location={url} context={reactRouterContext}>
+        <Provider store={store} >
+          {/* <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}> */}
+          <ThemeProvider theme={theme}>
             <Loadable.Capture report={moduleName => modules.push(moduleName)}>
               {/* {mobile === null ? <App /> : <MobileApp />} */}
               <App />
             </Loadable.Capture>
-          </MuiThemeProvider>
-        </JssProvider>
-      </Provider>
-    </StaticRouter>
+          </ThemeProvider>
+          {/* </JssProvider> */}
+        </Provider>
+      </StaticRouter>
+    )
   )
   let bundles = getBundles(stats, modules)
   const helmet = Helmet.renderStatic()
   const state = store.getState()
+  const css = sheets.toString()
 
-  return template(sheetsRegistry, helmet, state, content, bundles)
+  return template(css, helmet, state, content, bundles)
 }

@@ -6,11 +6,12 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const BrotliPlugin = require('brotli-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const paths = require('../paths')
 
 const config = {
   mode: 'production',
   entry: {
-    client: resolve('build', 'client', 'client.js')
+    client: paths.clientEntry
   },
   output: {
     filename: '[name].[contenthash].bundle.js',
