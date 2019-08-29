@@ -41,7 +41,7 @@ const cssOptions = {
   }
 }
 
-const clientFile = process.env.NODE_ENV === 'production' ? liveFiles['client'] : 'client.js'
+const clientFile = process.env.NODE_ENV !== 'production' ? 'client.js' : liveFiles['client']
 export default function template(sheetsRegistry, helmet, state = {}, content = '', bundles) {
   const css = sheetsRegistry.toString()
   const script = `<script>

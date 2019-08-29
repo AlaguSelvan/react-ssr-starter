@@ -3,6 +3,8 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const CompressionPlugin = require('compression-webpack-plugin')
 const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
 const BrotliPlugin = require('brotli-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
@@ -27,6 +29,9 @@ const config = {
     ]
   },
   plugins: [
+    // new ReactLoadablePlugin({
+    //   filename: './public/react-loadable.json'
+    // }),
     new CaseSensitivePathsPlugin(),
     new CompressionPlugin({
       filename: '[path].br[query]',

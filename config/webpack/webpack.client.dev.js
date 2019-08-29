@@ -38,9 +38,9 @@ const config = {
     ]
   },
   plugins: [
-    new ReactLoadablePlugin({
-      filename: './build/public/react-loadable.json'
-    }),
+    // new ReactLoadablePlugin({
+    //   filename: './build/public/react-loadable.json'
+    // }),
     new CaseSensitivePathsPlugin(),
     new webpack.ProgressPlugin((percentage, message) => {
       console.log(`${(percentage * 100).toFixed()}% ${message}`);

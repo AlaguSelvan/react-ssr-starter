@@ -6,22 +6,22 @@ import stats from '../../build/public/react-loadable.json'
 import { Provider } from 'react-redux'
 import { StaticRouter } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
-import { SheetsRegistry } from 'react-jss/lib/jss'
-import JssProvider from 'react-jss/lib/JssProvider'
-// import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
-import createGenerateClassName from '@material-ui/styles/createGenerateClassName'
 import purple from '@material-ui/core/colors/purple'
 import App from '../client/pages/Desktop/App'
-// import MobileApp from '../client/pages/Mobile/App'
 import template from './template'
+// import { SheetsRegistry } from 'react-jss/lib/jss'
+// import JssProvider from 'react-jss/lib/JssProvider'
+// import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
+// import createGenerateClassName from '@material-ui/styles/createGenerateClassName'
+// import MobileApp from '../client/pages/Mobile/App'
 
 export default function ssr(url, store, mobile) {
   const reactRouterContext = {}
   // const sheetsRegistry = new SheetsRegistry()
-  const sheets = new ServerStyleSheets()
   // const sheetsManager = new Map()
+  const sheets = new ServerStyleSheets()
 
   const theme = createMuiTheme({
     palette: {
@@ -34,7 +34,7 @@ export default function ssr(url, store, mobile) {
       useNextVariants: true
     }
   })
-  const generateClassName = createGenerateClassName()
+  // const generateClassName = createGenerateClassName()
 
   let modules = []
 
