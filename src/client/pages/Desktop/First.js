@@ -1,5 +1,6 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
+import Skeleton from '@material-ui/lab/Skeleton'
 import { Helmet } from 'react-helmet'
 import Paper from '@material-ui/core/Paper'
 import { Link } from 'react-router-dom'
@@ -32,6 +33,10 @@ export default function First() {
         <Link to="/2" style={styles.link}>
           <Typography variant="h5" style={styles.typography}>view next Page 👉</Typography>
         </Link>
+        <Link to="/3" style={styles.link}>
+          <Typography variant="h5" style={styles.typography}>skeleton loading page 🔥</Typography>
+        </Link>
+        <Skeleton variant="rect" width={210} height={118} />
       </Paper>
     </>
   )

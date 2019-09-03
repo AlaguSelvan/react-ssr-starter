@@ -14,7 +14,10 @@ const config = {
     filename: '[name].js',
     publicPath: '/public/'
   },
-  devtool: 'inline-cheap-module-source-map',
+  devtool: 'cheap-module-inline-source-map',
+  performance: {
+    hints: false,
+  },
   module: {
     rules: [
       {
@@ -48,7 +51,8 @@ const config = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
   optimization: {
     splitChunks: {

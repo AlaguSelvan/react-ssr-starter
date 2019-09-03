@@ -34,6 +34,9 @@ export default function Example() {
         <Link to="/" style={styles.link}>
           <Typography variant="h5" style={styles.typography}>Go Back 👈</Typography>
         </Link>
+        <Link to="/3" style={styles.link}>
+          <Typography variant="h5" style={styles.typography}>skeleton loading page 🔥</Typography>
+        </Link>
         <p>You clicked {count} times</p>
         <button onClick={() => setCount(count + 1)}>
           Click me
