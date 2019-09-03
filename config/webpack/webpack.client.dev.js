@@ -2,7 +2,8 @@ const webpack = require('webpack')
 const { resolve } = require('path')
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
+const WriteFileWebpackPlugin = require('write-file-webpack-plugin')
 const paths = require('../paths')
 
 const config = {
@@ -44,6 +45,7 @@ const config = {
     // new ReactLoadablePlugin({
     //   filename: './build/public/react-loadable.json'
     // }),
+    new WriteFileWebpackPlugin(),
     new CaseSensitivePathsPlugin(),
     new webpack.ProgressPlugin((percentage, message) => {
       console.log(`${(percentage * 100).toFixed()}% ${message}`);

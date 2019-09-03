@@ -10,7 +10,14 @@ const paths = {
   clientBuild: resolveApp('build'),
   clientEntry: resolveApp('src/client/client.js'),
   publicPath: resolveApp('build/public'),
-  assetPath: resolveApp('build/assets')
+  assetPath: resolveApp('build/assets'),
+  appHtml: resolveApp('config/webpack.config.js/template.html'),
+  clientBuild: resolveApp('build/client'),
+  serverBuild: resolveApp('build/server'),
+  dotenv: resolveApp('.env'),
+  src: resolveApp('src'),
+  srcClient: resolveApp('src/client'),
+  srcServer: resolveApp('src/server'),
 }
 
 module.exports = paths

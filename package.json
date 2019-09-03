@@ -13,10 +13,12 @@
   "scripts": {
     "---- // START DEVELOPMENT // ----": "",
     "start": "npm run build:setup && npm run build:dev && npm run start:dev",
+    "start:hot": "node scripts/start.js",
     "---- // START PRODUCTION // ----": "",
     "start:prod": "npm run build:setup && npm run build:compile && npm run build:prod && npm run start:live",
     "----- // POST BUILD // -----": "",
     "start:dev": "NODE_ENV=development nodemon src/index.js",
+    "start:new": "NODE_ENV=development nodemon src/startDev.js",
     "start:live": "NODE_ENV=production nodemon build/index.js",
     "----- // BUILD SCRIPTS // -----": "",
     "build:setup": "npm run clean:dist && npm run build:dist",
@@ -127,8 +129,11 @@
     "webpack": "^4.30.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.1",
+    "webpack-dev-middleware": "^3.7.1",
+    "webpack-hot-middleware": "^2.25.0",
     "webpack-manifest-plugin": "^2.0.4",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "write-file-webpack-plugin": "^4.5.1"
   },
   "lint-staged": {
     "src/**/*.js": [
