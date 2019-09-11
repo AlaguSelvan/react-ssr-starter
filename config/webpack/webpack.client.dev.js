@@ -42,9 +42,6 @@ const config = {
     ]
   },
   plugins: [
-    // new ReactLoadablePlugin({
-    //   filename: './build/public/react-loadable.json'
-    // }),
     new WriteFileWebpackPlugin(),
     new CaseSensitivePathsPlugin(),
     new webpack.ProgressPlugin((percentage, message) => {

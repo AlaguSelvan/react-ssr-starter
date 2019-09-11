@@ -29,9 +29,6 @@ const config = {
     ]
   },
   plugins: [
-    // new ReactLoadablePlugin({
-    //   filename: './public/react-loadable.json'
-    // }),
     new CaseSensitivePathsPlugin(),
     new CompressionPlugin({
       filename: '[path].br[query]',

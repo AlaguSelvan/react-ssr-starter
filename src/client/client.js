@@ -23,7 +23,8 @@ const theme = createMuiTheme({
     useNextVariants: true
   }
 })
-
+const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate
+console.log(renderMethod, 'renderMethod')
 // const renderMethod = process.env.NODE_ENV === 'production' ? ReactDOM.hydrate : ReactDOM.render
 Loadable.preloadReady().then(() => {
   ReactDOM.hydrate(
