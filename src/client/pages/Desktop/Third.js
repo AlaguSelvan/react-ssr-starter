@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import Skeleton from '@material-ui/lab/Skeleton';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography'
+import Skeleton from '@material-ui/lab/Skeleton'
 import { Link } from 'react-router-dom'
 
 const data = [
@@ -14,7 +14,7 @@ const data = [
     title: 'Don Diablo @ Tomorrowland Main Stage 2019 | Official…',
     channel: 'Don Diablo',
     views: '396 k views',
-    createdAt: 'a week ago',
+    createdAt: 'a week ago'
   },
   {
     src:
@@ -22,7 +22,7 @@ const data = [
     title: 'Top Latino Songs 2019 - Luis Fonsi, Ozuna, Nicky Jam…',
     channel: 'Dj Yanky Plus',
     views: '2.1 M views',
-    createdAt: '4 months ago',
+    createdAt: '4 months ago'
   },
   {
     src:
@@ -30,19 +30,19 @@ const data = [
     title: 'Calvin Harris, Sam Smith - Promises (Official Video)',
     channel: 'Calvin Harris',
     views: '130 M views',
-    createdAt: '10 months ago',
-  },
-];
+    createdAt: '10 months ago'
+  }
+]
 
 function Media(props) {
-  const { loading = false } = props;
+  const { loading = false } = props
 
   return (
     <Grid container wrap="nowrap">
-      <Link to="/1" >
+      <Link to="/2" >
         <Typography variant="h5" >Go Back 👈</Typography>
       </Link>
-      <Link to="/2" >
+      <Link to="/" >
         <Typography variant="h5">Go Back to First page👈</Typography>
       </Link>
       {(loading ? Array.from(new Array(3)) : data).map((item, index) => (
@@ -50,8 +50,8 @@ function Media(props) {
           {item ? (
             <img style={{ width: 210, height: 118 }} alt={item.title} src={item.src} />
           ) : (
-              <Skeleton variant="rect" width={210} height={118} />
-            )}
+            <Skeleton variant="rect" width={210} height={118} />
+          )}
 
           {item ? (
             <Box paddingRight={2}>
@@ -66,20 +66,20 @@ function Media(props) {
               </Typography>
             </Box>
           ) : (
-              <React.Fragment>
-                <Skeleton />
-                <Skeleton width="60%" />
-              </React.Fragment>
-            )}
+            <React.Fragment>
+              <Skeleton />
+              <Skeleton width="60%" />
+            </React.Fragment>
+          )}
         </Box>
       ))}
     </Grid>
-  );
+  )
 }
 
 Media.propTypes = {
-  loading: PropTypes.bool,
-};
+  loading: PropTypes.bool
+}
 
 export default function YouTube() {
   return (
@@ -91,5 +91,5 @@ export default function YouTube() {
         </Box>
       </Paper>
     </Box>
-  );
+  )
 }

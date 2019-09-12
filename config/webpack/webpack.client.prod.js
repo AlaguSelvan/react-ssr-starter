@@ -45,10 +45,6 @@ const config = {
       threshold: 10240,
       minRatio: 1.6
     }),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      openAnalyzer: false
-    }),
     new webpack.ProgressPlugin((percentage, message) => {
       console.log(`${(percentage * 100).toFixed()}% ${message}`);
     }),
@@ -71,6 +67,14 @@ const config = {
         test: /\.js$/,
         parallel: 4,
         exclude: /node_modules/
+      }),
+      // Include offline plugin to work well in even in slow network connection
+      new OfflinePlugin({
+        responseStrategy: 'network-first',
+        caches: 'all',
+        safeToUseOptionalCaches: true,
+        autoUpdate: 1000 * 60 * 48,
+        AppCache: false,
       })
     ],
     splitChunks: {

@@ -11,16 +11,9 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 import purple from '@material-ui/core/colors/purple'
 import App from '../client/pages/Desktop/App'
 import template from './template'
-// import { SheetsRegistry } from 'react-jss/lib/jss'
-// import JssProvider from 'react-jss/lib/JssProvider'
-// import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
-// import createGenerateClassName from '@material-ui/styles/createGenerateClassName'
-// import MobileApp from '../client/pages/Mobile/App'
 
 export default function ssr(url, store, mobile) {
   const reactRouterContext = {}
-  // const sheetsRegistry = new SheetsRegistry()
-  // const sheetsManager = new Map()
   const sheets = new ServerStyleSheets()
 
   const theme = createMuiTheme({
@@ -34,7 +27,6 @@ export default function ssr(url, store, mobile) {
       useNextVariants: true
     }
   })
-  // const generateClassName = createGenerateClassName()
 
   let modules = []
 
@@ -42,14 +34,12 @@ export default function ssr(url, store, mobile) {
     sheets.collect(
       <StaticRouter location={url} context={reactRouterContext}>
         <Provider store={store} >
-          {/* <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}> */}
           <ThemeProvider theme={theme}>
             <Loadable.Capture report={moduleName => modules.push(moduleName)}>
               {/* {mobile === null ? <App /> : <MobileApp />} */}
               <App />
             </Loadable.Capture>
           </ThemeProvider>
-          {/* </JssProvider> */}
         </Provider>
       </StaticRouter>
     )

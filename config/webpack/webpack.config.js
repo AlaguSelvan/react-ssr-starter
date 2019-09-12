@@ -1,8 +1,8 @@
+const webpack = require('webpack')
 const { resolve } = require('path')
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
 const Dotenv = require('dotenv-webpack')
-const webpack = require('webpack')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 const devMode = process.env.NODE_ENV !== 'production'

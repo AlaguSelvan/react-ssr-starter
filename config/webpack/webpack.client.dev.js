@@ -9,10 +9,11 @@ const paths = require('../paths')
 const config = {
   mode: 'development',
   entry: {
+    'webpack-hot-middleware/client?reload=true',
     client: paths.clientEntry
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].bundle.js',
     publicPath: '/public/'
   },
   devtool: 'cheap-module-inline-source-map',
@@ -51,7 +52,19 @@ const config = {
       filename: '[name].css',
       chunkFilename: '[id].css'
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
+    new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        PORT: JSON.stringify(process.env.PORT),
+      },
+    }),
+    new WebpackShellPlugin({
+      onBuildEnd: [`nodemon -q --watch ${serverLocation} ${serverLocation}`],
+      dev: true,
+    })
   ],
   optimization: {
     splitChunks: {

@@ -29,7 +29,7 @@ export default function First() {
         <meta name="description" content="React Ssr kit" />
       </Helmet>
       <Paper elevation={4} style={styles.paper} align="center">
-        <Typography variant="h5" style={styles.typography}>Hello From First Page Desktop</Typography>
+        <Typography variant="h5" style={styles.typography}>First Page</Typography>
         <Link to="/2" style={styles.link}>
           <Typography variant="h5" style={styles.typography}>view next Page 👉</Typography>
         </Link>
