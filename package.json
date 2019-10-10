@@ -38,6 +38,7 @@
     "@material-ui/styles": "^4.3.3",
     "classnames": "^2.2.6",
     "express": "^4.16.4",
+    "helmet": "^3.21.1",
     "mobile-detect": "^1.4.3",
     "node-fetch": "^2.4.1",
     "nprogress": "^0.2.0",
