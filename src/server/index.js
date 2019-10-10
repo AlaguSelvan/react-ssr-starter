@@ -13,18 +13,26 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 // app.use('/assets', express.static(paths.assetPath))
-if (process.env.NODE_ENV === 'development') {
-  app.use(paths.publicPath, express.static(path.join(paths.clientBuild, paths.publicPath)));
-}
-// app.use('/public', expressStaticGzip(paths.publicPath, {
-//   enableBrotli: true
-// }))
+if (process.env.NODE_ENV !== 'production') {
+  const webpack = require('webpack')
+  const webpackHotMiddleware = require('webpack-hot-middleware')
+  const webpackDevMiddleware = require('webpack-dev-middleware')
+  const config = require('../../webpack.client.config')
+  const compiler = webpack(config)
 
-const manifestPath = path.join(paths.clientBuild, paths.publicPath);
+  app.use(webpackHotMiddleware(compiler))
+  app.use(
+    webpackDevMiddleware(compiler, {
+      publicPath: config.output.publicPath
+    })
+  )
+}
+
+const manifestPath = path.join(paths.clientBuild, paths.publicPath)
 
 app.use(
   manifestHelpers({
-    manifestPath: `${manifestPath}/manifest.json`,
+    manifestPath: `${manifestPath}/manifest.json`
   })
 )
 

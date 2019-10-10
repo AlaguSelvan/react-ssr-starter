@@ -34,7 +34,7 @@ Loadable.preloadReady().then(() => {
         </Router>
       </MuiThemeProvider>
     </Provider>,
-    document.getElementById('app')
+    document.getElementById('root')
   )
 })
 

@@ -62,7 +62,7 @@ export default function template(sheetsRegistry, helmet, state = {}, content = '
                 </head>
                 <body>
                 <style id="jss-server-side">${minCss.styles}</style>
-                <div id="app" class="wrap-inner">${content}</div>
+                <div id="root" class="wrap-inner">${content}</div>
     ${bundles.map(bundle => `<script src='/public/${bundle.file}'></script>`).join('\n')}
                 ${script}
               </body>`.trim()

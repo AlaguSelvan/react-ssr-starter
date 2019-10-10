@@ -1,0 +1,143 @@
+const path = require('path');
+const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
+
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
+  .default;
+const styledComponentsTransformer = createStyledComponentsTransformer();
+
+module.exports = {
+  name: 'client',
+  entry: {
+    vendor: ['react', 'react-dom'],
+    main: [
+      'react-hot-loader/patch',
+      '@babel/runtime/regenerator',
+      'webpack-hot-middleware/client?reload=true',
+      './src/client/index.js',
+    ],
+  },
+  mode: 'development',
+  output: {
+    filename: '[name]-bundle.[hash].js',
+    chunkFilename: '[name].[hash].js',
+    path: path.resolve(__dirname, '../../dist'),
+    publicPath: '/',
+  },
+  devtool: 'source-map',
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
+      },
+      {
+        test: /\.tsx?$/,
+        loader: [
+          'babel-loader',
+          {
+            loader: 'awesome-typescript-loader',
+            options: {
+              useCache: true,
+              getCustomTransformers: () => ({
+                before: [styledComponentsTransformer],
+              }),
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'css-hot-loader',
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 1,
+              modules: {
+                mode: 'local',
+                localIdentName:
+                  '[name]__[local]--[hash:base64:5]',
+              },
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              ident: 'postcss',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'css-hot-loader',
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 1,
+              modules: {
+                mode: 'local',
+                localIdentName:
+                  '[name]__[local]--[hash:base64:5]',
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(jpg|svg|png|ico|gif|eot|woff|ttf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[name].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'markdown-with-front-matter-loader',
+          },
+        ],
+      },
+    ],
+  },
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
+    extensions: ['.ts', '.tsx', '.js', '.json', '.jsx', '.scss'],
+  },
+  plugins: [
+    new ReactLoadablePlugin({
+      filename: path.resolve(process.cwd(), 'build/public/react-loadable.json')
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[name].css',
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
+        WEBPACK: true,
+      },
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
+};
