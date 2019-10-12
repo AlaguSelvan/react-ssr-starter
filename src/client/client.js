@@ -24,9 +24,9 @@ const theme = createMuiTheme({
   }
 })
 
-// const renderMethod = process.env.NODE_ENV === 'production' ? ReactDOM.hydrate : ReactDOM.render
+const renderMethod = process.env.NODE_ENV === 'production' ? ReactDOM.hydrate : ReactDOM.render
 Loadable.preloadReady().then(() => {
-  ReactDOM.hydrate(
+  renderMethod(
     <Provider store={store}>
       <MuiThemeProvider theme={theme}>
         <Router>
@@ -37,3 +37,16 @@ Loadable.preloadReady().then(() => {
     document.getElementById('app')
   )
 })
+
+if (process.env.NODE_ENV === 'development') {
+  // Enable webpack hot module replacement for routes
+  module.hot.accept('./Router/routes', () => {
+    try {
+      const nextRoutes = require('./Router/routes').default
+
+      renderMethod(nextRoutes)
+    } catch (error) {
+      console.error(`==> 😭  Routes hot reloading error ${error}`)
+    }
+  })
+}

@@ -40,18 +40,18 @@ export default function ssr(url, store, mobile) {
 
   let content = renderToString(
     sheets.collect(
-      <StaticRouter location={url} context={reactRouterContext}>
+      <Loadable.Capture report={moduleName => modules.push(moduleName)}>
         <Provider store={store} >
-          {/* <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}> */}
-          <ThemeProvider theme={theme}>
-            <Loadable.Capture report={moduleName => modules.push(moduleName)}>
+          <StaticRouter location={url} context={reactRouterContext}>
+            {/* <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}> */}
+            <ThemeProvider theme={theme}>
               {/* {mobile === null ? <App /> : <MobileApp />} */}
               <App />
-            </Loadable.Capture>
-          </ThemeProvider>
-          {/* </JssProvider> */}
+            </ThemeProvider>
+            {/* </JssProvider> */}
+          </StaticRouter>
         </Provider>
-      </StaticRouter>
+      </Loadable.Capture>
     )
   )
   let bundles = getBundles(stats, modules)

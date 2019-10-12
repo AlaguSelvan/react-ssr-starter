@@ -7,9 +7,7 @@ const paths = require('../paths')
 
 const config = {
   mode: 'development',
-  entry: {
-    client: paths.clientEntry
-  },
+  entry: ['webpack-hot-middleware/client?reload=true', paths.clientEntry],
   output: {
     filename: '[name].js',
     publicPath: '/public/'
@@ -41,8 +39,8 @@ const config = {
     new ReactLoadablePlugin({
       filename: './build/public/react-loadable.json'
     }),
-    new CaseSensitivePathsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new CaseSensitivePathsPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[name].css'
