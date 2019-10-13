@@ -9,7 +9,7 @@ const config = {
   mode: 'development',
   entry: ['webpack-hot-middleware/client?reload=true', paths.clientEntry],
   output: {
-    filename: '[name].js',
+    path: resolve('build', 'public'),
     publicPath: '/public/'
   },
   devtool: 'inline-cheap-module-source-map',
