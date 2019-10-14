@@ -4,10 +4,9 @@ const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugi
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const paths = require('../paths')
-
 const config = {
   mode: 'development',
-  entry: ['webpack-hot-middleware/client?reload=true', paths.clientEntry],
+  entry: ['webpack-hot-middleware/client?reload=true', './src/client/client.js'],
   output: {
     path: resolve('build', 'public'),
     publicPath: '/public/'
@@ -37,10 +36,9 @@ const config = {
   },
   plugins: [
     new ReactLoadablePlugin({
-      filename: './build/public/react-loadable.json'
+      filename: './build/react-loadable.json'
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new CaseSensitivePathsPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[name].css'

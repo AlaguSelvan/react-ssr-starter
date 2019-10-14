@@ -1,4 +1,5 @@
 import CleanCSS from 'clean-css'
+import serialize from 'serialize-javascript'
 // import { liveFiles } from '../manifest/liveFiles'
 
 const cssOptions = {
@@ -42,13 +43,9 @@ const cssOptions = {
 }
 
 // const clientFile = process.env.NODE_ENV === 'production' ? liveFiles['client'] : 'client.js'
-export default function template(sheetsRegistry, helmet, state = {}, content = '', bundleScripts) {
+export default function template(sheetsRegistry, helmet, initialState, content, bundleScripts) {
   const css = sheetsRegistry.toString()
-  const script = `<script>
-          window.__STATE__ = ${JSON.stringify(state)}
-     </script>
-`
-//      <script src="/public/${clientFile}"></script>
+  //      <script src="/public/${clientFile}"></script>
   // const manifest = `<link rel="manifest" href="/public/manifest.json">`
   const minCss = new CleanCSS({ ...cssOptions }).minify(css)
   const page = `<!DOCTYPE html>
@@ -64,8 +61,9 @@ export default function template(sheetsRegistry, helmet, state = {}, content = '
                 <body>
                 <style id="jss-server-side">${minCss.styles}</style>
                 <div id="root" class="wrap-inner">${content}</div>
+                <script src='/public/main.js' />
                 ${bundleScripts}
-                ${script}
+                <script>window.__INITIAL_STATE__ = ${serialize(initialState)}</script>
               </body>`.trim()
   return page
 }
