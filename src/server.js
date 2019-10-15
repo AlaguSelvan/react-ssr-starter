@@ -2,7 +2,7 @@ import express from 'express'
 import Loadable from 'react-loadable'
 import helmet from 'helmet'
 import bodyParser from 'body-parser'
-import paths from '../config/paths'
+// import paths from '../config/paths'
 import routes from './client/Router/routes'
 import configureStore from './client/redux/configureStore'
 // import MobileDetect from 'mobile-detect'
@@ -17,36 +17,36 @@ import { Helmet } from 'react-helmet'
 import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 import purple from '@material-ui/core/colors/purple'
-import App from './client/pages/Desktop/App'
+import App from './client/App'
 import template from './utils/template'
 import fs from 'fs'
 import openBrowser from 'react-dev-utils/openBrowser'
 const { resolve } = require('path')
 
 const app = express()
-const expressStaticGzip = require('express-static-gzip')
+// const expressStaticGzip = require('express-static-gzip')
 app.use(helmet())
 
 require('dotenv').config()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use('/assets', express.static(paths.assetPath))
-app.use('/public', expressStaticGzip(paths.publicPath, {
-  enableBrotli: true
-}))
+// app.use('/assets', express.static(paths.assetPath))
+// app.use('/public', expressStaticGzip(paths.publicPath, {
+//   enableBrotli: true
+// }))
 
 const HOST = process.env.NODE_HOST || 'localhost' // Define your host from 'package.json'
 const PORT = process.env.PORT
 
 if (process.env.NODE_ENV !== 'development') {
-  app.use('/public', expressStaticGzip(paths.publicPath, {
-    enableBrotli: true
-  }))
-  app.use('/assets', express.static(paths.assetPath))
+  // app.use('/public', expressStaticGzip(paths.publicPath, {
+  //   enableBrotli: true
+  // }))
+  // app.use('/assets', express.static(paths.assetPath))
 } else {
   const webpack = require('webpack')
-  const webpackConfig = require('../config/webpack/webpack.config.hot.js')
+  const webpackConfig = require('../config/webpack/webpack.client.dev.js')
   const compiler = webpack(webpackConfig)
   compiler.apply(new webpack.ProgressPlugin())
   app.use(
