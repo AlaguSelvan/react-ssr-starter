@@ -17,7 +17,7 @@
     "---- // START PRODUCTION // ----": "",
     "start:prod": "npm run build:setup && npm run build:compile && npm run build:prod && npm run start:live",
     "----- // POST BUILD // -----": "",
-    "dev": "NODE_ENV=development node src/index.js",
+    "dev": "npm run clean:dist && NODE_ENV=development node src/index.js",
     "start:dev": "NODE_ENV=development nodemon src/index.js",
     "start:live": "NODE_ENV=production nodemon build/index.js",
     "----- // BUILD SCRIPTS // -----": "",

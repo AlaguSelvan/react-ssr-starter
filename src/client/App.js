@@ -5,10 +5,10 @@ import routes from './Router/routes'
 export default function App() {
   return (
     <Switch>
-      {routes.map(({ path, component, ...route }) => {
-        console.log(route, 'debug')
+      {routes.map(({ component, ...route }, index) => {
+        // console.log(path, 'path')
         return (
-          <Route key={path} component={component} {...route}/>
+          <Route key={index} component={component} {...route}/>
         )
       })}
     </Switch>
