@@ -61,7 +61,7 @@ export default function template(sheetsRegistry, helmet, initialState, content, 
                 <body>
                 <style id="jss-server-side">${minCss.styles}</style>
                 <div id="root" class="wrap-inner">${content}</div>
-                <script src='/public/main.js' />
+                ${process.env.NODE_ENV === 'production' ? `` : `<script src="/public/main.js"></script>`}
                 ${bundleScripts}
                 <script>window.__INITIAL_STATE__ = ${serialize(initialState)}</script>
               </body>`.trim()

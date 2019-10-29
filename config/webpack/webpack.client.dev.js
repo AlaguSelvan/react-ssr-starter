@@ -3,6 +3,7 @@ const { resolve } = require('path')
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+
 const config = {
   mode: 'development',
   entry: ['webpack-hot-middleware/client?reload=true', './src/client.js'],
@@ -34,9 +35,6 @@ const config = {
     ]
   },
   plugins: [
-    new ReactLoadablePlugin({
-      filename: './build/react-loadable.json'
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',

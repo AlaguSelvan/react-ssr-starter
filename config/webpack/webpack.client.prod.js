@@ -5,16 +5,19 @@ const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const BrotliPlugin = require('brotli-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+// const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+// const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
 
 const config = {
   mode: 'production',
-  entry: {
-    client: resolve('build', 'client.js')
-  },
+  entry: ['./src/client.js'],
   output: {
-    filename: '[name].[contenthash].bundle.js',
-    chunkFilename: '[name].[contenthash].[id].bundle.js'
+    path: resolve('build', 'public'),
+    publicPath: '/public/',
+    filename: '[name].[chunkhash:8].bundle.js',
+    chunkFilename: '[name].[chunkhash:8].bundle.js'
   },
   module: {
     rules: [
@@ -26,7 +29,6 @@ const config = {
     ]
   },
   plugins: [
-    new CaseSensitivePathsPlugin(),
     new CompressionPlugin({
       filename: '[path].br[query]',
       algorithm: 'brotliCompress',
@@ -46,15 +48,8 @@ const config = {
       analyzerMode: 'static',
       openAnalyzer: false
     }),
-    new webpack.ProgressPlugin((percentage, message) => {
-      console.log(`${(percentage * 100).toFixed()}% ${message}`);
-    }),
     new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.AggressiveMergingPlugin(),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      openAnalyzer: false
-    })
+    new webpack.optimize.AggressiveMergingPlugin()
   ],
   optimization: {
     minimizer: [
@@ -65,28 +60,14 @@ const config = {
         exclude: /node_modules/
       }),
       new TerserPlugin({
-        // TerserPlugin config is taken entirely from react-scripts
         terserOptions: {
           parse: {
-            // we want terser to parse ecma 8 code. However, we don't want it
-            // to apply any minfication steps that turns valid ecma 5 code
-            // into invalid ecma 5 code. This is why the 'compress' and 'output'
-            // sections only apply transformations that are ecma 5 safe
-            // https://github.com/facebook/create-react-app/pull/4234
             ecma: 8,
           },
           compress: {
             ecma: 5,
             warnings: false,
-            // Disabled because of an issue with Uglify breaking seemingly valid code:
-            // https://github.com/facebook/create-react-app/issues/2376
-            // Pending further investigation:
-            // https://github.com/mishoo/UglifyJS2/issues/2011
             comparisons: false,
-            // Disabled because of an issue with Terser breaking valid code:
-            // https://github.com/facebook/create-react-app/issues/5250
-            // Pending futher investigation:
-            // https://github.com/terser-js/terser/issues/120
             inline: 2,
           },
           mangle: {
@@ -95,33 +76,27 @@ const config = {
           output: {
             ecma: 5,
             comments: false,
-            // Turned on because emoji and regex is not minified properly using default
-            // https://github.com/facebook/create-react-app/issues/2488
             ascii_only: true,
           },
         },
-        // Use multi-process parallel running to improve the build speed
-        // Default number of concurrent runs: os.cpus().length - 1
         parallel: true,
-        // Enable file caching
         cache: true,
         sourceMap: false,
       })
     ],
     splitChunks: {
-      chunks: 'async',
+      chunks: 'all',
       minSize: 0,
-      minChunks: 4,
+      minChunks: 1,
       maxAsyncRequests: 1,
       maxInitialRequests: 1,
       automaticNameDelimiter: '.',
       name: true,
       cacheGroups: {
-        vendors: {
-          chunks: 'all',
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          reuseExistingChunk: true
+        vendor: {
+          name: 'vendor',
+          chunks: 'initial',
+          minChunks: 2,
         },
         default: {
           minChunks: 2,

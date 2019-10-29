@@ -6,7 +6,6 @@ export default function App() {
   return (
     <Switch>
       {routes.map(({ component, ...route }, index) => {
-        // console.log(path, 'path')
         return (
           <Route key={index} component={component} {...route}/>
         )
