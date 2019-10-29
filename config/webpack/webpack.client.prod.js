@@ -96,7 +96,7 @@ const config = {
         vendor: {
           name: 'vendor',
           chunks: 'initial',
-          minChunks: 2,
+          minChunks: 2, 
         },
         default: {
           minChunks: 2,
