@@ -20,17 +20,17 @@ const styles = {
   }
 }
 
-export default function First() {
+export default function Mobile() {
   return (
     <>
       <Helmet>
         <title>React Ssr kit</title>
-        <meta name="description" content="React First Page" />
+        <meta name="description" content="React Ssr kit" />
       </Helmet>
       <Paper elevation={4} style={styles.paper} align="center">
-        <Typography variant="h5" style={styles.typography}>React Router Enabled 🔥</Typography>
-        <Link to="/2" style={styles.link}>
-          <Typography variant="h5" style={styles.typography}>Go Forward 👉</Typography>
+        <Typography variant="h5" style={styles.typography}>Hello From Home Page Of Mobile</Typography>
+        <Link to="/mobile/about" style={styles.link}>
+          <Typography variant="h5" style={styles.typography}>view next Page Mobile 👉</Typography>
         </Link>
       </Paper>
     </>

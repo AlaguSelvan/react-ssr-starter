@@ -1,6 +1,5 @@
 import CleanCSS from 'clean-css'
-import serialize from 'serialize-javascript'
-// import { liveFiles } from '../manifest/liveFiles'
+import { liveFiles } from '../manifest/liveFiles'
 
 const cssOptions = {
   compatibility: {
@@ -42,10 +41,13 @@ const cssOptions = {
   }
 }
 
-// const clientFile = process.env.NODE_ENV === 'production' ? liveFiles['client'] : 'client.js'
-export default function template(sheetsRegistry, helmet, initialState, content, bundleScripts) {
+const clientFile = process.env.NODE_ENV === 'production' ? liveFiles['client'] : 'client.js'
+export default function template(sheetsRegistry, helmet, state = {}, content = '', bundles) {
   const css = sheetsRegistry.toString()
-  //      <script src="/public/${clientFile}"></script>
+  const script = `<script>
+          window.__STATE__ = ${JSON.stringify(state)}
+     </script>
+     <script src="/public/${clientFile}"></script>`
   // const manifest = `<link rel="manifest" href="/public/manifest.json">`
   const minCss = new CleanCSS({ ...cssOptions }).minify(css)
   const page = `<!DOCTYPE html>
@@ -60,10 +62,9 @@ export default function template(sheetsRegistry, helmet, initialState, content, 
                 </head>
                 <body>
                 <style id="jss-server-side">${minCss.styles}</style>
-                <div id="root" class="wrap-inner">${content}</div>
-                ${process.env.NODE_ENV === 'production' ? `` : `<script src="/public/main.js"></script>`}
-                ${bundleScripts}
-                <script>window.__INITIAL_STATE__ = ${serialize(initialState)}</script>
+                <div id="app" class="wrap-inner">${content}</div>
+    ${bundles.map(bundle => `<script src='/public/${bundle.file}'></script>`).join('\n')}
+                ${script}
               </body>`.trim()
   return page
 }
