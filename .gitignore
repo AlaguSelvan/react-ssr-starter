@@ -3,3 +3,4 @@ build
 public
 yarn-error.log
 yarn.lock
+./yarn.lock
