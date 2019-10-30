@@ -16,7 +16,7 @@ function Loading(props) {
 export default function LoadableHOC(opts) {
   return Loadable(Object.assign({
     loading: Loading,
-    delay: 2500,
-    timeout: 200
+    delay: 5000,
+    timeout: 5000
   }, opts))
 }

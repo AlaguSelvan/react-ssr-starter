@@ -3,15 +3,12 @@ const { resolve } = require('path')
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const paths = require('../paths')
 
 const config = {
   mode: 'development',
-  entry: {
-    client: paths.clientEntry
-  },
+  entry: ['webpack-hot-middleware/client?reload=true', './src/client.js'],
   output: {
-    filename: '[name].js',
+    path: resolve('build', 'public'),
     publicPath: '/public/'
   },
   devtool: 'inline-cheap-module-source-map',
@@ -38,16 +35,10 @@ const config = {
     ]
   },
   plugins: [
-    new ReactLoadablePlugin({
-      filename: './build/public/react-loadable.json'
-    }),
-    new CaseSensitivePathsPlugin(),
-    new webpack.ProgressPlugin((percentage, message) => {
-      console.log(`${(percentage * 100).toFixed()}% ${message}`);
-    }),
+    new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css'
+      chunkFilename: '[name].css'
     })
   ],
   optimization: {

@@ -12,14 +12,10 @@ module.exports = {
     '@babel/preset-react'
   ],
   plugins: [
+    'react-hot-loader/babel',
+    'react-loadable/babel',
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-proposal-class-properties',
-    '@babel/plugin-proposal-object-rest-spread',
-    'react-loadable/babel'
-  ],
-  env: {
-    test: {
-      plugins: ['@babel/transform-modules-commonjs', 'dynamic-import-node']
-    }
-  }
+    '@babel/plugin-proposal-object-rest-spread'
+  ]
 }
