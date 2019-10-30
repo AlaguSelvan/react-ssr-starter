@@ -32,7 +32,7 @@ const base = {
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
-      '@src': resolve(__dirname, '../src'),
+      '@client': resolve(__dirname, './client'),
       '@config': resolve(__dirname, '../config'),
       '@app': resolve(__dirname, '../src/app'),
       '@components': resolve(__dirname, '../src/app/components'),
@@ -50,16 +50,15 @@ const base = {
     publicPath: '/public/'
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.IS_BROWSER': JSON.stringify(true)
-    }),
-    new CleanWebpackPlugin({
-      dry: true
-    }),
     new ReactLoadablePlugin({
       filename: './build/react-loadable.json'
-    })
-    // new webpack.NamedModulesPlugin()
+    }),
+    // new webpack.DefinePlugin({
+    //   'process.env.IS_BROWSER': JSON.stringify(true)
+    // }),
+    // new CleanWebpackPlugin({
+    //   dry: true
+    // }),
   ]
 }
 

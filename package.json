@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "npm run build:setup && npm run build:dev && npm run start:dev",
-    "start:live": "NODE_ENV=production nodemon build/index.js",
+    "start:live": "NODE_ENV=production node build/server.js",
     "start:prod": "npm run build:setup && npm run build:compile && npm run build:prod && npm run start:live",
     "dev": "NODE_ENV=development node src/index.js",
     "prod": "NODE_ENV=production webpack --mode production --config config/webpack/webpack.client.prod.js --progress",
