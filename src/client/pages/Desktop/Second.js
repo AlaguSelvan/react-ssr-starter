@@ -30,7 +30,7 @@ export default function Example() {
         <meta name="description" content="React Second Page" />
       </Helmet>
       <Paper elevation={4} style={styles.paper} align="center">
-        <Typography variant="h5" style={styles.typography}>React Router with hmr Enabled 🔥</Typography>
+        <Typography variant="h5" style={styles.typography}>React Router Enabled 🔥</Typography>
         <Link to="/" style={styles.link}>
           <Typography variant="h5" style={styles.typography}>Go Back 👈</Typography>
         </Link>

@@ -15,6 +15,20 @@ const desktopSecond = LoadableHOC({
   path: ({ page }) => path.join(__dirname, `/public/${page}`)
 })
 
+const MobileHome = LoadableHOC({
+  loader: () => import('../pages/Mobile/Home' /* webpackChunkName: "mobHome" */),
+  webpack: () => [require.resolveWeak('../pages/Mobile/Home')],
+  modules: ['../pages/Mobile/Home'],
+  path: ({ page }) => path.join(__dirname, `/public/${page}`)
+})
+
+const MobileFirst = LoadableHOC({
+  loader: () => import('../pages/Mobile/About' /* webpackChunkName: "about" */),
+  webpack: () => [require.resolveWeak('../pages/Mobile/About')],
+  modules: ['../pages/Mobile/About'],
+  path: ({ page }) => path.join(__dirname, `/public/${page}`)
+})
+
 export default [
   {
     path: '/',
@@ -25,6 +39,18 @@ export default [
   {
     path: '/2',
     component: desktopSecond,
+    serverFetch: '',
+    exact: true
+  },
+  {
+    path: '/mobile',
+    component: MobileHome,
+    serverFetch: '',
+    exact: true
+  },
+  {
+    path: '/mobile/About',
+    component: MobileFirst,
     serverFetch: '',
     exact: true
   }
