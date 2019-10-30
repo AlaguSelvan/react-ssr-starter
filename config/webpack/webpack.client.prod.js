@@ -11,6 +11,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const config = {
   mode: 'production',
+  vendor: [
+    'react',
+    'react-dom',
+    'react-router'
+  ],
   entry: ['./src/client.js'],
   output: {
     path: resolve('build', 'public'),
