@@ -1,6 +1,7 @@
 import CleanCSS from 'clean-css'
 import serialize from 'serialize-javascript'
 // import { liveFiles } from '../manifest/liveFiles'
+import manifest from '../../build/public/manifest.json'
 
 const cssOptions = {
   compatibility: {
@@ -47,6 +48,8 @@ export default function template(sheetsRegistry, helmet, initialState, content, 
   const css = sheetsRegistry.toString()
   //      <script src="/public/${clientFile}"></script>
   // const manifest = `<link rel="manifest" href="/public/manifest.json">`
+  const mainScript = `<script src='${manifest['main.js']}' />`
+  console.log(mainScript, 'mainScript')
   const minCss = new CleanCSS({ ...cssOptions }).minify(css)
   const page = `<!DOCTYPE html>
               <html lang="en">
@@ -61,7 +64,7 @@ export default function template(sheetsRegistry, helmet, initialState, content, 
                 <body>
                 <style id="jss-server-side">${minCss.styles}</style>
                 <div id="root" class="wrap-inner">${content}</div>
-                ${process.env.NODE_ENV === 'production' ? `` : `<script src="/public/main.js"></script>`}
+                ${mainScript}
                 ${bundleScripts}
                 <script>window.__INITIAL_STATE__ = ${serialize(initialState)}</script>
               </body>`.trim()
