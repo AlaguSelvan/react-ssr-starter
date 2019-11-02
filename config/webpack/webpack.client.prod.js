@@ -8,14 +8,10 @@ const TerserPlugin = require('terser-webpack-plugin')
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const ManifestPlugin = require('webpack-manifest-plugin')
 
 const config = {
   mode: 'production',
-  vendor: [
-    'react',
-    'react-dom',
-    'react-router'
-  ],
   entry: ['./src/client.js'],
   output: {
     path: resolve('build', 'public'),
@@ -42,6 +38,10 @@ const config = {
           },
           'css-loader'
         ]
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   },
@@ -73,41 +73,42 @@ const config = {
       openAnalyzer: false
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),
+    new ManifestPlugin()
     // new webpack.optimize.AggressiveMergingPlugin()
   ],
   optimization: {
-    // minimizer: [
-    //   new UglifyJsPlugin({
-    //     test: /\.js$/,
-    //     cache: true,
-    //     parallel: 4,
-    //     exclude: /node_modules/
-    //   }),
-    //   new TerserPlugin({
-    //     terserOptions: {
-    //       parse: {
-    //         ecma: 8,
-    //       },
-    //       compress: {
-    //         ecma: 5,
-    //         warnings: false,
-    //         comparisons: false,
-    //         inline: 2,
-    //       },
-    //       mangle: {
-    //         safari10: true,
-    //       },
-    //       output: {
-    //         ecma: 5,
-    //         comments: false,
-    //         ascii_only: true,
-    //       },
-    //     },
-    //     parallel: true,
-    //     cache: true,
-    //     sourceMap: false,
-    //   })
-    // ],
+    minimizer: [
+      new UglifyJsPlugin({
+        test: /\.js$/,
+        cache: true,
+        parallel: 4,
+        exclude: /node_modules/
+      }),
+      new TerserPlugin({
+        terserOptions: {
+          parse: {
+            ecma: 8,
+          },
+          compress: {
+            ecma: 5,
+            warnings: false,
+            comparisons: false,
+            inline: 2,
+          },
+          mangle: {
+            safari10: true,
+          },
+          output: {
+            ecma: 5,
+            comments: false,
+            ascii_only: true,
+          },
+        },
+        parallel: true,
+        cache: true,
+        sourceMap: false,
+      })
+    ],
     splitChunks: {
       chunks: 'async',
       minSize: 0,
