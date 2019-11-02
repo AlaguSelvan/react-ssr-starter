@@ -28,7 +28,7 @@ export default function First() {
         <meta name="description" content="React First Page" />
       </Helmet>
       <Paper elevation={4} style={styles.paper} align="center">
-        <Typography variant="h5" style={styles.typography}>React Router Enabled 🔥</Typography>
+        <Typography variant="h5" style={styles.typography}>React Router with SSR, Code Splitting & HMR Enabled 🚀 🔥</Typography>
         <Link to="/2" style={styles.link}>
           <Typography variant="h5" style={styles.typography}>Go Forward 👉</Typography>
         </Link>
