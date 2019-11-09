@@ -1,6 +1,5 @@
 import CleanCSS from 'clean-css'
 import serialize from 'serialize-javascript'
-// import { liveFiles } from '../manifest/liveFiles'
 import manifest from '../../build/public/manifest.json'
 
 const cssOptions = {
@@ -43,13 +42,9 @@ const cssOptions = {
   }
 }
 
-// const clientFile = process.env.NODE_ENV === 'production' ? liveFiles['client'] : 'client.js'
 export default function template(sheetsRegistry, helmet, initialState, content, bundleScripts) {
   const css = sheetsRegistry.toString()
-  //      <script src="/public/${clientFile}"></script>
-  // const manifest = `<link rel="manifest" href="/public/manifest.json">`
-  const mainScript = `<script src='${manifest['main.js']}' />`
-  console.log(mainScript, 'mainScript')
+  let mainScript = `<script src='${manifest['main.js']}' />`
   const minCss = new CleanCSS({ ...cssOptions }).minify(css)
   const page = `<!DOCTYPE html>
               <html lang="en">

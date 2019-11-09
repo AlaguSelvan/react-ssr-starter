@@ -3,6 +3,7 @@ const { resolve } = require('path')
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin')
 
 const config = {
   mode: 'development',
@@ -43,7 +44,8 @@ const config = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[name].css'
-    })
+    }),
+    new ManifestPlugin()
   ],
   optimization: {
     splitChunks: {

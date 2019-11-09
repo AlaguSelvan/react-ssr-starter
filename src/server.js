@@ -109,6 +109,13 @@ app.get('*', (req, res) => {
   const store = configureStore()
   let { url } = req
   const branch = matchRoutes(routes, req.path)
+  if (process.env.NODE_ENV === 'development') {
+    // TODO hmr node
+    // https://twitter.com/dan_abramodevelopmentv/status/1192898770842931209
+    for (let key in require.cache) {
+      delete require.cache[key]
+    }
+  }
   const serverData = routes
     .filter(route => matchPath(url, route))
     .map(route => route.serverFetch ? route.serverFetch(store) : store)
