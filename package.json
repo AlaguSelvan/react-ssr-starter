@@ -12,7 +12,7 @@
     "yarn": "^1.13"
   },
   "scripts": {
-    "start": "npm run build:setup && npm run build:dev && npm run start:dev",
+    "start": "NODE_ENV=development node src/index.js",
     "start:live": "NODE_ENV=production node build/server.js",
     "start:prod": "npm run build:setup && npm run build:compile && npm run build:prod && npm run start:live",
     "dev": "NODE_ENV=development node src/index.js",

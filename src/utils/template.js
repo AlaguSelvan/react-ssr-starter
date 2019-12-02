@@ -62,6 +62,11 @@ export default function template(sheetsRegistry, helmet, initialState, content, 
                 ${mainScript}
                 ${bundleScripts}
                 <script>window.__INITIAL_STATE__ = ${serialize(initialState)}</script>
+                <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+      }
+    </script>
               </body>`.trim()
   return page
 }
